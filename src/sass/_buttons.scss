@@ -1,0 +1,97 @@
+.btn {
+  border: none;
+  padding: 0px 40px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  background: #FF3F3A;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 52px; /* 325% */
+  letter-spacing: 0.5px;
+  margin-right: 16px;
+}
+
+.btn_small_image {
+  width: 52px;
+  height: 52px;
+  border: none;
+  background-image: url('../icons/header/play-btn-small-play-btn-small.svg');
+  background-size: cover;
+  border-radius: 100%;
+  margin-top: 156px;
+  &__eclipse {
+    width: 84px;
+    height: 84px;
+    background-image: url("../icons/header/play-btn-small-Ellipse-large.png");
+    background-size: cover;
+    position: absolute;
+    top: 140px;
+    left: -18px;
+  }
+}
+
+
+.btn_outline_large {
+  border: 2px solid #FF3F3A;
+  color: #FF3F3A;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 52px; /* 325% */
+  letter-spacing: 0.5px;
+  background-color: rgba(28,28,28,0);
+}
+
+.btn_regular {
+  border-radius: 4px;
+  background: #FF3F3A;
+  color: #FFFF;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 314.286% */
+  letter-spacing: 0.5px;
+  margin-top: 48px;
+}
+
+
+
+
+
+.regular-button {
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: 2px solid #FF3F3A;
+  padding: 0 20px;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px; /* 314.286% */
+  letter-spacing: 0.5px;
+  background-color: rgba(28, 28, 28, 0);
+  color: #FF3F3A;
+  &:hover {
+    background: #FF3F3A;
+    color: white;
+    border-radius: 4px;
+    transition: 0.2s all;
+    box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 30px 24px -10px rgba(255, 63, 58, 0.10), 0px 80px 80px -20px rgba(255, 63, 58, 0.16);
+  }
+}
+
+.footer__btn {
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 9px;
+  left: 256px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0);
+}

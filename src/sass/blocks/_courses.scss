@@ -1,0 +1,89 @@
+.courses {
+  max-height: 860px;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.card {
+  display: flex;
+  width: 600px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+
+  &__wrapper {
+    width: 386px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+  }
+  &__border {
+    display: flex;
+    padding: 1px 8px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    &_green {
+      background: rgba(3, 206, 164, 1);
+    }
+    &_blue {
+      background: rgba(90, 135, 252, 1);
+    }
+    &_orange {
+      background: rgba(248, 152, 40, 1)
+    }
+    &_red {
+      background: rgba(245, 47, 110, 1);
+    }
+  }
+  &__subject {
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__subtitle {
+    color: rgba(30, 33, 44, 1);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &__info {
+    display: inline-flex;
+  }
+  &__price {
+    color: rgba(255, 66, 66, 1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &__info {
+    color: rgba(120, 122, 128, 1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    align-items: center;
+  }
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 1px;
+    height: 18px;
+    background: rgba(120, 122, 128, 1);
+    margin: 0 8px;
+  }
+}

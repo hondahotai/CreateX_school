@@ -1,0 +1,245 @@
+.team {
+  min-height: 1570px;
+  flex-shrink: 0;
+  background: url("../img/team/Background.jpg") center (center/cover) no-repeat;
+  padding: 166px 0 100px 0;
+
+  &__slider {
+    &-controls {
+      position: absolute;
+      right: 16px;
+      top: 46px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    &-wrapper {
+      margin-top: 60px;
+    }
+    &-inner {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__slide {
+    width: 285px;
+    height: 416px;
+    flex-shrink: 0;
+  }
+  &__image {
+    border-radius: 4px;
+    background-color: rgba(255, 207, 45, 1);
+    &-wrapper {
+      position: relative;
+    }
+    &-wrapper::before {
+      content: '';
+      display: block;
+      background-image: url("../icons/team-gradient.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 246px;
+      height: 320px;
+      border-radius: 4px;
+      position: absolute;
+      transition: all 0.5s;
+      opacity: 0;
+    }
+    &-wrapper:hover::before {
+      transition: 0.3s;
+      opacity: 1;
+    }
+  }
+  &__socials {
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    display: flex;
+    width: 246px;
+    height: 320px;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    a {
+      padding: 5px;
+    }
+    a svg {
+      display: none;
+    }
+    &:hover a svg {
+      display: block;
+      transition: 0.3s;
+    }
+  }
+
+.team__socials a:hover {
+  svg path {
+    fill: #FFFFFF;
+    opacity: 1;
+    transition: 0.3s;
+  }
+}
+
+  &__name {
+    width: 245px;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgba(66, 69, 81, 1);
+    margin-top: 16px;
+  }
+  &__position {
+    width: 245px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: rgba(120, 122, 128, 1);
+    margin-top: 4px;
+  }
+}
+
+
+.team__slider-next {
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    svg path {
+      fill: white;
+    }
+    background-color: rgba(255, 63, 58, 1);
+    transition: 0.4s all;
+  }
+}
+
+.team__slider-prev {
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    svg path {
+      fill: white;
+    }
+    background-color: rgba(255, 63, 58, 1);
+    transition: 0.4s all;
+  }
+}
+
+
+.testimonials-heading {
+  margin: 180px 0 60px 0;
+  text-align: center;
+}
+
+.testimonials-carousel {
+  width: 1020px;
+  height: 344px;
+  margin: 0 auto;
+  flex-shrink: 0;
+  background-color: #FFFFFF;
+  padding: 64px 105px;
+  &__content {
+    display: inline-flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  &__text {
+    width: 752px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: #424551;
+    margin-bottom: 24px;
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    left: 59px;
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+    }
+  }
+  &__name {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    color: #1E212C;
+  }
+  &__position {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    color: #787A80;
+  }
+}
+
+.testimonials {
+  &-controls {
+    position: relative;
+  }
+  &-prev {
+    position: absolute;
+    padding: 24px;
+    bottom: 137px;
+    left: 34px;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      svg path {
+        fill: white;
+      }
+      background-color: rgba(255, 63, 58, 1);
+      transition: 0.4s all;
+    }
+  }
+  &-next {
+    position: absolute;
+    padding: 24px;
+    left: 1155px;
+    top: -210px;
+    border-radius: 100%;
+    cursor: pointer;
+    &:hover {
+      svg path {
+        fill: white;
+      }
+      background-color: rgba(255, 63, 58, 1);
+      transition: 0.4s all;
+    }
+  }
+  &-dots__wrapper {
+    padding-top: 60px;
+    display: flex;
+    height: 0;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  &-dots {
+    width: 30px;
+    height: 3px;
+    background-color: #B3B7BC;
+    cursor: pointer;
+    &-active {
+      background-color: #424551;
+    }
+  }
+}

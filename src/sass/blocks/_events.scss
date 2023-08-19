@@ -1,0 +1,109 @@
+.events {
+  min-height: 850px;
+  background: url("../img/events/bg-color.jpg") center (center/cover) no-repeat;
+  padding: 80px 0 85px 0;
+  position: relative;
+  &__shapes {
+
+  }
+  &__circles {
+    opacity: 0.2;
+    position: absolute;
+    top: -159px;
+    right: -125px;
+    transform: rotate(285deg);
+  }
+  &__dots {
+    opacity: 0.8;
+    position: absolute;
+    left: -175px;
+    top: 623px;
+  }
+}
+
+.event {
+  &__wrapper {
+    margin-top: 60px;
+  }
+  &__item {
+    display: flex;
+    width: 1230px;
+    height: 126px;
+    padding: 32px 40px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: var(--white, #FFF);
+    margin-bottom: 24px;
+    &:hover {
+      border-radius: 4px;
+      box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 30px 24px -10px rgba(255, 63, 58, 0.10), 0px 80px 80px -20px rgba(255, 63, 58, 0.16);
+      transform: scale(1.025);
+      transition: 0.2s all;
+    }
+  }
+  &__date {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &__time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  &__day {
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 130%; /* 62.4px */
+    letter-spacing: 1px;
+    color: rgba(255, 63, 58, 1);
+  }
+  &__week {
+    width: 100px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgba(30, 33, 44, 1);
+  }
+  &__clock {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(120, 122, 128, 1);
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  &__title {
+    width: 757px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    color: rgba(30, 33, 44, 1);
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: rgba(120, 122, 128, 1);
+  }
+  &__view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+  }
+}
