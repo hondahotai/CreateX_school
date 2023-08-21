@@ -1,0 +1,51 @@
+.related {
+  padding: 120px 0 180px 0;
+  &-slide__inner {
+    display: flex;
+    margin-top: 60px;
+  }
+  &-view {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 40px;
+  }
+}
+
+.slider-controls {
+  position: absolute;
+  right: 16px;
+  top: 46px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+    }
+
+.slider-next {
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    svg path {
+      fill: white;
+    }
+    background-color: rgba(255, 63, 58, 1);
+    transition: 0.4s all;
+  }
+}
+
+.slider-prev {
+  padding: 24px;
+  flex-shrink: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    svg path {
+      fill: white;
+    }
+    background-color: rgba(255, 63, 58, 1);
+    transition: 0.4s all;
+  }
+}
