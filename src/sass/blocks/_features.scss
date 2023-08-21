@@ -1,0 +1,42 @@
+.features {
+  padding-bottom: 126px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__heading {
+    display: flex;
+    width: 495px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+.featured {
+  &__list {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+  &__item {
+    width: 564px;
+    color: var(--gray-800, #424551);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+    &::before {
+      content: '';
+      display: block;
+      background: url("../icons/about/check.svg") center (center/cover) no-repeat;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      padding: 4px;
+      left: -45px;
+    }
+  }
+}

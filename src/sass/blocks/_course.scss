@@ -1,0 +1,18 @@
+.course {
+  min-height: 468px;
+  background: url("../img/Header/background3.jpg") center (center/cover) no-repeat;
+  &__heading {
+    padding: 120px;
+    .title {
+      color: var(--primary, #FF3F3A);
+    }
+    .title__big {
+      margin-top: 12px;
+      width: 1020px;
+    }
+  }
+}
+
+.curator {
+  padding: 66px 0 180px 0;
+}

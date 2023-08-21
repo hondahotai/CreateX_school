@@ -1,11 +1,19 @@
 .certificate {
   background-color: #FFFFFF;
   padding: 120px 0;
+  &-second {
+    padding: 120px;
+    min-height: 740px;
+  }
 
   &__info {
     width: 397px;
     height: 334px;
     flex-shrink: 0;
+    &-second {
+      position: relative;
+      top: 86px;
+    }
   }
 
   &__logos {
