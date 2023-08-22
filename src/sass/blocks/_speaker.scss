@@ -1,0 +1,43 @@
+.speaker {
+  padding: 66px 0 180px 0;
+}
+
+.card__logos {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  .logo_first {
+    background: url("../icons/DelMartrategyLogo1grey.png") center (center/cover) no-repeat;
+    width: 105px;
+    height: 50px;
+  }
+  .logo_second {
+    background: url("../icons/NationalhealthLogo1grey.png") center (center/cover) no-repeat;
+    width: 105px;
+    height: 50px;
+  }
+  .logo_third {
+    background: url("../icons/SentinalonsultingLogo1grey.png") center (center/cover) no-repeat;
+    width: 105px;
+    height: 50px;
+  }
+}
+
+.card__socials_speaker {
+  display: flex;
+}
+
+.speaker-registration {
+  padding-bottom: 120px;
+  .register__wrapper {
+    justify-content: space-between;
+  }
+  span {
+    color: var(--gray-800, #424551);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+}

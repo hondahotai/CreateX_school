@@ -1,0 +1,30 @@
+.event-page {
+  min-height: 468px;
+  background: url("../img/Header/background3.jpg") center (center/cover) no-repeat;
+}
+.event__heading {
+  padding: 120px 0;
+  .title {
+    color: var(--primary, #FF3F3A);
+  }
+}
+
+.info__content-event {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.sidebar {
+  a {
+    color: var(--primary, #FF3F3A);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 21px */
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+  }
+}

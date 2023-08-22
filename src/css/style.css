@@ -1257,6 +1257,7 @@ section.testimonials {
   background: rgba(255, 255, 255, 0.12);
   margin-top: 24px;
   outline-color: #8b8b8b;
+  color: white;
 }
 .footer__join-text {
   font-size: 10px;
@@ -1353,7 +1354,6 @@ section.testimonials {
 
 .sidebar {
   width: 495px;
-  height: 550px;
   border-radius: 4px;
   border: 1px solid var(--gray-300, #E5E8ED);
   background: var(--white, #FFF);
@@ -1911,6 +1911,10 @@ section.testimonials {
   align-items: flex-start;
   flex-shrink: 0;
   gap: 0;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #E5E8ED);
+  background: var(--white, #FFF);
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
 }
 .events__wrapper_grid div.event__item .event__date {
   display: flex;
@@ -1982,6 +1986,138 @@ section.testimonials {
 }
 .events__pagination span.active {
   color: var(--primary, #FF3F3A);
+}
+
+.event-page {
+  min-height: 468px;
+  background: url("../img/Header/background3.jpg") center center/cover no-repeat;
+}
+
+.event__heading {
+  padding: 120px 0;
+}
+.event__heading .title {
+  color: var(--primary, #FF3F3A);
+}
+
+.info__content-event {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.sidebar a {
+  color: var(--primary, #FF3F3A);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 21px */
+  letter-spacing: 1px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.speaker {
+  padding: 66px 0 180px 0;
+}
+
+.card__logos {
+  margin-top: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+}
+.card__logos .logo_first {
+  background: url("../icons/DelMartrategyLogo1grey.png") center center/cover no-repeat;
+  width: 105px;
+  height: 50px;
+}
+.card__logos .logo_second {
+  background: url("../icons/NationalhealthLogo1grey.png") center center/cover no-repeat;
+  width: 105px;
+  height: 50px;
+}
+.card__logos .logo_third {
+  background: url("../icons/SentinalonsultingLogo1grey.png") center center/cover no-repeat;
+  width: 105px;
+  height: 50px;
+}
+
+.card__socials_speaker {
+  display: flex;
+}
+
+.speaker-registration {
+  padding-bottom: 120px;
+}
+.speaker-registration .register__wrapper {
+  justify-content: space-between;
+}
+.speaker-registration span {
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.speaker-promo {
+  min-height: 354px;
+  padding: 128px 0 120px 0;
+}
+.speaker-promo__wrapper {
+  width: 1230px;
+  height: 354px;
+  flex-shrink: 0;
+  background: url("../img/bg-colorSpeaker.png") center center/cover no-repeat;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 60px 105px;
+}
+.speaker-promo__inner h3 {
+  width: 600px;
+  color: var(--gray-900, #1E212C);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 130%; /* 41.6px */
+  padding-bottom: 48px;
+}
+.speaker-promo__form {
+  display: flex;
+  width: 600px;
+  height: 52px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-bottom: 24px;
+}
+.speaker-promo__form input {
+  display: flex;
+  width: 409px;
+  height: 52px;
+  padding: 13px 272px 13px 16px;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 1px solid var(--gray-400, #D7DADD);
+  background: var(--white, #FFF);
+}
+.speaker-promo__checkbox {
+  padding-top: 24px;
+  display: flex;
+}
+.speaker-promo__checkbox input {
+  accent-color: #FF3F3A;
+}
+
+.related-event {
+  min-height: 887px;
+  background: var(--gray-200, #F4F5F6);
+  padding: 100px 0 185px 0;
 }
 
 /*# sourceMappingURL=style.css.map */

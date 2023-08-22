@@ -1,0 +1,53 @@
+.speaker-promo {
+  min-height: 354px;
+  padding: 128px 0 120px 0;
+  &__wrapper {
+    width: 1230px;
+    height: 354px;
+    flex-shrink: 0;
+    background: url("../img/bg-colorSpeaker.png") center (center/cover) no-repeat;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 60px 105px;
+  }
+  &__inner {
+    h3 {
+      width: 600px;
+      color: var(--gray-900, #1E212C);
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 130%; /* 41.6px */
+      padding-bottom: 48px;
+    }
+  }
+  &__form {
+    display: flex;
+    width: 600px;
+    height: 52px;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    padding-bottom: 24px;
+    input {
+      display: flex;
+      width: 409px;
+      height: 52px;
+      padding: 13px 272px 13px 16px;
+      align-items: center;
+      flex-shrink: 0;
+      border-radius: 4px;
+      border: 1px solid var(--gray-400, #D7DADD);
+      background: var(--white, #FFF);
+    }
+  }
+  &__checkbox {
+    padding-top: 24px;
+    display: flex;
+    input {
+      accent-color: #FF3F3A;
+    }
+  }
+}
