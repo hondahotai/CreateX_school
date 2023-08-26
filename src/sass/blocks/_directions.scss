@@ -1,0 +1,99 @@
+.directions {
+  padding-bottom: 180px;
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 60px;
+  }
+  &-card__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  &-card__item {
+    display: flex;
+    width: 390px;
+    height: 420px;
+    padding-bottom: 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--gray-300, #E5E8ED);
+    background: var(--white, #FFF);
+    &:hover {
+      box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+      transition: 0.2s all;
+      transform: scale(1.010);
+    }
+  }
+  &-card__content {
+    padding: 0 24px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &-card__badge {
+    display: flex;
+    padding: 1px 8px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 4px;
+    color: var(--white, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
+    &_green {
+      background: var(--success, #03CEA4);
+    }
+    &_blue {
+      background: var(--info, #5A87FC);
+    }
+    &_orange {
+      background: var(--warning, #F89828);
+    }
+    &_red {
+      background: #F52F6E;
+    }
+    &_purple {
+      background: #7772F1;
+    }
+  }
+  &-card__text {
+    color: var(--gray-700, #787A80);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+  &-card__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &:hover {
+      span {
+        color: var(--primary, #FF3F3A);
+        transition: 0.3s all;
+      }
+    }
+  }
+  &-card__item_none {
+    flex-shrink: 0;
+    padding: 174px 65px 189px 83px;
+    border-radius: 4px;
+    background: var(--gray-200, #F4F5F6);
+    span {
+      color: var(--gray-800, #424551);
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%;
+    }
+  }
+}

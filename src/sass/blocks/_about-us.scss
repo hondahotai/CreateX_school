@@ -1,0 +1,32 @@
+.about-us__heading {
+  padding: 80px 0 48px 0;
+}
+
+.about-us__text {
+  width: 600px;
+  color: var(--gray-900, #1E212C);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 30px */
+  padding-bottom: 24px;
+}
+
+.about-us__under-text {
+  width: 600px;
+  color: var(--gray-800, #424551);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+
+.about-us__intro {
+  position: relative;
+  padding-bottom: 180px;
+  img {
+    position: absolute;
+    top: -97px;
+    right: 10px;
+  }
+}

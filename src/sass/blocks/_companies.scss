@@ -1,0 +1,39 @@
+.companies {
+  min-height: 1256px;
+  background: var(--gray-200, #F4F5F6);
+  &__heading {
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  &-logos {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 38px;
+    padding-left: 25px;
+    &__item {
+     position: relative;
+     user-select: none;
+     width: 174px;
+     img {
+       display: inline-block;
+     }
+     .swap-from {
+       display: block;
+       transition: opacity .2s ease-in-out;
+     }
+     .swap-to {
+       display: block;
+       position: absolute;
+       top: 0;
+       left: 0;
+       opacity: 0;
+       z-index: 0;
+       transition: opacity .2s ease-in-out;
+     }
+     &:hover, &.active {
+       .swap-from { opacity: 0;}
+       .swap-to {opacity: 1;}
+     }
+   }
+  }
+}

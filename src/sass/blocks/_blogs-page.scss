@@ -1,0 +1,112 @@
+.blogs-header {
+
+}
+.blogs-heading {
+  text-align: center;
+  padding: 80px 0 60px 0;
+}
+
+.blogs-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogs-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.blogs-tab {
+  display: flex;
+  padding: 10px 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  &__inner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  span {
+    color: var(--gray-600, #9A9CA5);
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
+  }
+  &_active {
+    border-radius: 4px;
+    border: 1px solid var(--primary, #FF3F3A);
+    span {
+      color: #FF3F3A;
+    }
+    svg path {
+      fill: #FF3F3A;
+    }
+  }
+}
+
+.blog-category {
+  display: flex;
+  position: relative;
+  align-items: center;
+  &__inner {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    label {
+      color: var(--gray-800, #424551);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 25.6px */
+    }
+    select {
+      display: flex;
+      width: 160px;
+      height: 44px;
+      padding: 11px 16px 12px 16px;
+      justify-content: center;
+      align-items: center;
+      gap: 49px;
+      border-radius: 4px;
+      border: 1px solid var(--gray-400, #D7DADD);
+      background: var(--white, #FFF);
+      margin-right: 40px;
+      &:focus {
+        outline: #ff8c89;
+        transition: .2s linear;
+        box-shadow: 0 0 4px #ff8c89;
+        border: none;
+      }
+    }
+  }
+  input {
+    display: flex;
+    width: 285px;
+    height: 44px;
+    padding: 11px 16px 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 157px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--gray-400, #D7DADD);
+    background: var(--white, #FFF);
+    &:focus {
+      outline: #ff8c89;
+      border: none;
+      transition: .2s linear;
+      box-shadow: 0 0 4px #ff8c89;
+    }
+  }
+  button {
+    position: absolute;
+    right: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+  }
+}
