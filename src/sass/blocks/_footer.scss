@@ -65,6 +65,9 @@
     margin-top: 24px;
     outline-color: #8b8b8b;
     color: white;
+    &:focus {
+      color: black;
+    }
   }
   &__join-text {
     font-size: 10px;

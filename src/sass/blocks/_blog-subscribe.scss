@@ -1,0 +1,9 @@
+.blog-subscribe {
+  min-height: 454px;
+  background: var(--gray-200, #F4F5F6);
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

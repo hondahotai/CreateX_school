@@ -1,0 +1,48 @@
+.contacts-content {
+  padding-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+.contacts-heading {
+  padding-bottom: 40px;
+}
+
+.contacts-widget {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+.contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  .caption {
+    color: var(--gray-700, #787A80);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 21px */
+  }
+  .text {
+    color: var(--gray-900, #1E212C);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+}
+.contacts-follow {
+  padding-top: 48px;
+  div.title {
+    padding-bottom: 24px;
+  }
+}
+.contacts-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 32px;
+}
