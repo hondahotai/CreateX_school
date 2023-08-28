@@ -11,28 +11,32 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <nav class="header__menu">
-                <a href="index.html" class="header__logo">
-                    <img src="icons/header/Navbar-logo.svg" alt="logo">
-                </a>
+        <div class="navbar-large">
+            <div class="container">
+                <nav id="navbar" class="header__menu">
+                    <a href="index.html" class="header__logo">
+                        <img src="icons/header/Navbar-logo.svg" alt="logo">
+                    </a>
 
-                <ul class="header__links">
-                    <li class="header__item"><a href="about-us.html">About Us</a></li>
-                    <li class="header__item dropdown"></li>
-                    <li class="header__item dropdown"></li>
-                    <li class="header__item dropdown"></li>
-                    <li class="header__item"><a href="contacts.html">Contacts</a></li>
-                </ul>
+                    <ul class="header__links">
+                        <li class="header__item"><a href="about-us.html">About Us</a></li>
+                        <li class="header__item dropdown"></li>
+                        <li class="header__item dropdown"></li>
+                        <li class="header__item dropdown"></li>
+                        <li class="header__item"><a href="contacts.html">Contacts</a></li>
+                    </ul>
 
-                <div class="header__wrapper">
-                    <button class="btn btn_large">Get consultation</button>
-                    <div class="header__account">
-                        <img src="icons/header/Navbar-Person.svg" class="header__account_person" alt="Person">
-                        <a href="#">Log in / Register</a>
+                    <div class="header__wrapper">
+                        <a href="contacts.html"><button class="btn btn_large">Get consultation</button></a>
+                        <div class="header__account">
+                            <img src="icons/header/Navbar-Person.svg" class="header__account_person" alt="Person">
+                            <a data-modal href="#">Log in / Register</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
+                </nav>
+            </div>
+        </div>
+        <div class="container">
 
             <div class="show-reel">
                 <div class="show-reel__play">
@@ -43,8 +47,8 @@
 
                 <h1>Enjoy studying <br>with Createx <br>Online Courses</h1>
                 <div class="show-reel__buttons">
-                    <button class="btn btn_outline_large">About us</button>
-                    <button class="btn btn_large">Explore courses</button>
+                    <a href="about-us.html"><button class="btn btn_outline_large">About us</button></a>
+                    <a href="courses.html"><button class="btn btn_large">Explore courses</button></a>
                 </div>
             </div>
 
@@ -103,7 +107,7 @@
                         <li class="about__item"><img src="icons/about/check.svg" alt="">Ultricies amet justo et eget quisque purus
                             <br> vulputate dapibus tortor.</li>
                     </ul>
-                    <button class="btn btn_regular">More about us</button>
+                    <a href="about-us.html"><button class="btn btn_regular">More about us</button></a>
                 </div>
             </div>
 
@@ -121,111 +125,123 @@
                     <h6 class="title">Ready to learn?</h6>
                     <h2 class="title__big">Featured Courses</h2>
                 </div>
-                <button class="btn btn_outline_large">View all courses</button>
+                <a href="courses.html"><button class="btn btn_outline_large">View all courses</button></a>
             </div>
 
             <div class="courses__content">
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_jeromy.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_green">
-                            <div class="card__subject">Marketing</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_jeromy.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">The Ultimate Google Ads Training Course</div>
-                        <div class="card__info">
-                            <div class="card__price">$100</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Jerome Bell</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_green">
+                                <div class="card__subject">Marketing</div>
+                            </div>
+                            <div class="card__subtitle">The Ultimate Google Ads Training Course</div>
+                            <div class="card__info">
+                                <div class="card__price">$100</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Jerome Bell</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_Marvin.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_blue">
-                            <div class="card__subject">Management</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Marvin.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">Prduct Management Fundamentals</div>
-                        <div class="card__info">
-                            <div class="card__price">$480</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Marvin McKinney</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_blue">
+                                <div class="card__subject">Management</div>
+                            </div>
+                            <div class="card__subtitle">Prduct Management Fundamentals</div>
+                            <div class="card__info">
+                                <div class="card__price">$480</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Marvin McKinney</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_Leslie.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_orange">
-                            <div class="card__subject">HR & Recruting</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Leslie.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">HR  Management and Analytics</div>
-                        <div class="card__info">
-                            <div class="card__price">$200</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Leslie Alexander Li</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_orange">
+                                <div class="card__subject">HR & Recruting</div>
+                            </div>
+                            <div class="card__subtitle">HR  Management and Analytics</div>
+                            <div class="card__info">
+                                <div class="card__price">$200</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Leslie Alexander Li</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_Kristin.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_green">
-                            <div class="card__subject">Marketing</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Kristin.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">Brand Management & PR Communications</div>
-                        <div class="card__info">
-                            <div class="card__price">$530</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Kristin Watson</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_green">
+                                <div class="card__subject">Marketing</div>
+                            </div>
+                            <div class="card__subtitle">Brand Management & PR Communications</div>
+                            <div class="card__info">
+                                <div class="card__price">$530</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Kristin Watson</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_Dianne.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_blue">
-                            <div class="card__subject">Management</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Dianne.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">Business Development Management</div>
-                        <div class="card__info">
-                            <div class="card__price">$400</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Dianne Russell</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_blue">
+                                <div class="card__subject">Management</div>
+                            </div>
+                            <div class="card__subtitle">Business Development Management</div>
+                            <div class="card__info">
+                                <div class="card__price">$400</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Dianne Russell</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="card">
-                    <div class="card__image">
-                        <img src="img/cards/card-image_Guy.png" alt="photo">
-                    </div>
-                    <div class="card__wrapper">
-                        <div class="card__border card__border_red">
-                            <div class="card__subject">Design</div>
+                <a href="course.html">
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Guy.png" alt="photo">
                         </div>
-                        <div class="card__subtitle">Graphic Design Basic</div>
-                        <div class="card__info">
-                            <div class="card__price">$500</div>
-                            <div class="card__divider"></div>
-                            <div class="card__autor">by Guy Hawkins</div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_red">
+                                <div class="card__subject">Design</div>
+                            </div>
+                            <div class="card__subtitle">Graphic Design Basic</div>
+                            <div class="card__info">
+                                <div class="card__price">$500</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Guy Hawkins</div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
@@ -291,11 +307,32 @@
                         <div class="tab__text">Urna nisi, arcu cras nunc. Aenean quam est lobortis mi non fames dictum suspendisse. Morbi mauris cras massa ut dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id dignissim massa ut amet. Amet enim, nisi tempus vehicula.
                         </div>
                     </div>
+                    <img src="img/benefits/02.svg" alt="illustration" class="tab__image">
+                </div>
+                <div class="tab__content hidden">
+                    <div class="tab__wrapper">
+                        <div class="tab__heading">Always in touch, ready to support</div>
+                        <div class="tab__text">Faucibus erat massa elementum nec fermentum augue. Ante pellentesque dis et malesuada mauris, faucibus est et a. Gravida malesuada ut varius eu pretium vitae eu. Volutpat nullam posuere eget felis at dui neque. Neque vitae, pulvinar donec integer lacus, fermentum, faucibus. Lorem porttitor hendrerit vel interdum arcu arcu mollis massa. Velit nulla felis ornare elit a platea malesuada.
+                        </div>
+                    </div>
+                    <img src="img/benefits/03.svg" alt="illustration" class="tab__image">
+                </div>
+                <div class="tab__content hidden">
+                    <div class="tab__wrapper">
+                        <div class="tab__heading">The most carefully selected materials</div>
+                        <div class="tab__text">Senectus magnis diam tellus nibh elit ac ac. Elit eget faucibus urna, feugiat arcu mattis viverra tempor id. Vivamus nunc quam donec non amet nulla etiam ullamcorper posuere. Venenatis commodo molestie eleifend nulla faucibus in. In sed felis adipiscing pharetra, etiam. Molestie euismod consectetur eu sed. Sit magnis sed sed ipsum vulputate pellentesque nullam faucibus.
+
+                        </div>
+                    </div>
+                    <img src="img/benefits/04.svg" alt="illustration" class="tab__image">
+                </div>
+                <div class="tab__content hidden">
+                    <div class="tab__wrapper">
+                        <div class="tab__heading">Student communication</div>
+                        <div class="tab__text">Eu placerat magna elementum nulla egestas id. Non sit enim tortor massa id tristique vel tincidunt sit. Tellus, ridiculus dictum purus nibh sed bibendum. In eleifend ac convallis convallis lectus. Urna semper ac non eros, donec accumsan egestas ipsum. Arcu at morbi.</div>
+                    </div>
                     <img src="img/benefits/illustration.png" alt="illustration" class="tab__image">
                 </div>
-                <div class="tab__content"></div>
-                <div class="tab__content"></div>
-                <div class="tab__content"></div>
             </div>
         </div>
     </section>
@@ -866,10 +903,10 @@
         </div>
     </footer>
 
-    <div class="modal-backdrop hide">
+    <div class="modal-backdrop hidden">
         <div class="modal__dialog">
-            <div class="modal__content_in show">
-                <button class="close">
+            <div class="modal__content_in">
+                <button data-close class="close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="#787A80"/>
                     </svg>
@@ -895,7 +932,7 @@
                 </form>
                     <div class="modal-info">
                         <p>Don't have an account?</p>
-                        <a href="#">Sign up</a>
+                        <a id="sign-up" href="#">Sign up</a>
                     </div>
                     <div class="modal__divider"></div>
                     <div class="modal-sign">
@@ -918,8 +955,8 @@
                         </div>
                     </div>
             </div>
-            <div class="modal__content_up hide">
-                <button class="close">
+            <div class="modal__content_up">
+                <button data-close class="close">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L12 10.5858L18.2929 4.29289C18.6834 3.90237 19.3166 3.90237 19.7071 4.29289C20.0976 4.68342 20.0976 5.31658 19.7071 5.70711L13.4142 12L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L12 13.4142L5.70711 19.7071C5.31658 20.0976 4.68342 20.0976 4.29289 19.7071C3.90237 19.3166 3.90237 18.6834 4.29289 18.2929L10.5858 12L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z" fill="#787A80"/>
                     </svg>
@@ -954,7 +991,7 @@
                 </form>
                 <div class="modal-info">
                     <p>Already have an account?</p>
-                    <a href="#">Sign in</a>
+                    <a id="sign-in" href="#">Sign in</a>
                 </div>
                 <div class="modal__divider"></div>
                 <div class="modal-sign">

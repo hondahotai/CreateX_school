@@ -82,14 +82,28 @@ h1 {
 
 .show {
   display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.3s;
 }
 
 .hide {
   display: none;
 }
 
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .active a {
   color: #FF3F3A;
+}
+
+button:hover {
+  transform: scale(1.015);
+  transition: 0.3s all;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.25), 0px 12px 10px -6px rgba(154, 156, 165, 0.25), 0px 30px 24px -10px rgba(154, 156, 165, 0.24), 0px 80px 80px -20px rgba(154, 156, 165, 0.24);
 }
 
 .btn {
@@ -125,6 +139,11 @@ h1 {
   position: absolute;
   top: 140px;
   left: -18px;
+  opacity: 0;
+}
+.btn_small_image__eclipse:hover {
+  opacity: 1;
+  transition: 0.15s linear;
 }
 
 .btn_outline_large {
@@ -136,6 +155,12 @@ h1 {
   line-height: 52px; /* 325% */
   letter-spacing: 0.5px;
   background-color: rgba(28, 28, 28, 0);
+}
+.btn_outline_large:hover {
+  background: #FF3F3A;
+  color: white;
+  transform: scale(1.015);
+  transition: 0.3s all;
 }
 
 .btn_regular {
@@ -324,6 +349,33 @@ h1 {
   transition: opacity 0.3s linear;
 }
 
+#navbar.navbar_scrolled {
+  position: fixed;
+  z-index: 2500;
+}
+#navbar.navbar_scrolled .header__links {
+  position: relative;
+  left: 75px;
+}
+#navbar.navbar_scrolled .header__wrapper {
+  position: relative;
+  left: 255px;
+}
+
+.navbar-large.navbar_scrolled {
+  background-color: #FFFFFF;
+  outline: none;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  z-index: 2499;
+  transition: all 0.15s ease-in-out;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #E5E8ED);
+  background: var(--white, #FFF);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
 .about {
   max-height: 920px;
   padding: 180px 0;
@@ -399,6 +451,19 @@ h1 {
   border: 1px solid var(--gray-300, #E5E8ED);
   background: var(--white, #FFF);
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+}
+.card:hover {
+  border-radius: 4px;
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(0, 0, 0, 0.08), 0px 30px 24px -10px rgba(0, 0, 0, 0.1), 0px 80px 80px -20px rgba(0, 0, 0, 0.16);
+  transform: scale(1.01);
+  transition: 0.2s all;
+}
+.card:hover .card__subtitle {
+  color: #FF3F3A;
+}
+.card img {
+  width: 100%;
+  height: 100%;
 }
 .card__wrapper {
   width: 386px;
@@ -683,6 +748,13 @@ h1 {
   line-height: 160%;
   color: rgb(154, 156, 165);
 }
+.tab__item:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.69);
+}
+.tab__item:hover svg path {
+  fill: rgba(0, 0, 0, 0.69);
+}
 .tab__item svg {
   margin-right: 8px;
 }
@@ -693,9 +765,13 @@ h1 {
   border: 1px solid #FF3F3A;
   border-radius: 4px;
   color: rgb(255, 63, 58);
+  transition: all 0.15s ease-in-out;
+  pointer-events: none;
 }
 .tab__item_active svg path {
   fill: #FF3F3A;
+  transition: all 0.15s ease-in-out;
+  pointer-events: none;
 }
 
 .tab__content {
@@ -709,6 +785,7 @@ h1 {
 .tab__wrapper {
   display: flex;
   flex-direction: column;
+  position: absolute;
 }
 .tab__heading {
   font-size: 32px;
@@ -3427,7 +3504,7 @@ blockquote::before {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  z-index: 4000;
   width: 100%;
   height: 100%;
   overflow: hidden;

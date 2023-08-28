@@ -30,6 +30,11 @@
     position: absolute;
     top: 140px;
     left: -18px;
+    opacity: 0;
+    &:hover {
+      opacity: 1;
+      transition: 0.15s linear;
+    }
   }
 }
 
@@ -43,6 +48,12 @@
   line-height: 52px; /* 325% */
   letter-spacing: 0.5px;
   background-color: rgba(28,28,28,0);
+  &:hover {
+    background: #FF3F3A;
+    color: white;
+    transform: scale(1.015);
+    transition: 0.3s all;
+  }
 }
 
 .btn_regular {

@@ -129,3 +129,30 @@
     transition: opacity 0.3s linear;
   }
 }
+
+#navbar.navbar_scrolled {
+  position: fixed;
+  z-index: 2500;
+  //transition: all 0.15s ease-in-out;
+  .header__links {
+    position: relative;
+    left: 75px;
+  }
+  .header__wrapper {
+    position: relative;
+    left: 255px;
+  }
+}
+.navbar-large.navbar_scrolled {
+  background-color: #FFFFFF;
+  outline: none;
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  z-index: 2499;
+  transition: all 0.15s ease-in-out;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #E5E8ED);
+  background: var(--white, #FFF);
+  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
