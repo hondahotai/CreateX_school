@@ -16,10 +16,12 @@
     }
     &-wrapper {
       margin-top: 60px;
+      overflow: hidden;
     }
     &-inner {
       display: flex;
-      justify-content: center;
+      gap: 30px;
+      width: 100%;
     }
   }
   &__slide {

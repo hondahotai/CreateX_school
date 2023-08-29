@@ -971,10 +971,12 @@ button:hover {
 }
 .team__slider-wrapper {
   margin-top: 60px;
+  overflow: hidden;
 }
 .team__slider-inner {
   display: flex;
-  justify-content: center;
+  gap: 30px;
+  width: 100%;
 }
 .team__slide {
   width: 285px;

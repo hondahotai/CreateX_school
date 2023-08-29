@@ -157,4 +157,30 @@ window.addEventListener('DOMContentLoaded', () => {
                });
            }
         });
+
+        // slider cards (team section)
+        const prev = document.querySelector('.team__slider-prev'),
+              next = document.querySelector('.team__slider-next'),
+              slideInner = document.querySelector('.team__slider-inner');
+
+        let offset = 0;
+        slideInner.style.transition = '0.5s all';
+
+        next.addEventListener('click', () => {
+           offset = offset + 315;
+           if (offset > 1260) {
+               offset = 0;
+           }
+            slideInner.style.transform = `translateX(-${offset}px)`;
+        });
+
+        prev.addEventListener('click', () => {
+           offset = offset - 315;
+           if (offset < 0) {
+               offset = 1260;
+           }
+            slideInner.style.transform = `translateX(-${offset}px)`;
+        });
+
 });
+
