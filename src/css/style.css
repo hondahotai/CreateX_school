@@ -845,7 +845,7 @@ button:hover {
 .event__item:hover {
   border-radius: 4px;
   box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(255, 63, 58, 0.08), 0px 30px 24px -10px rgba(255, 63, 58, 0.1), 0px 80px 80px -20px rgba(255, 63, 58, 0.16);
-  transform: scale(1.025);
+  transform: scale(1.01);
   transition: 0.2s all;
 }
 .event__item_second:hover {
@@ -898,6 +898,10 @@ button:hover {
   font-weight: 700;
   line-height: 150%;
   color: rgb(30, 33, 44);
+}
+.event__title:hover {
+  color: #FF3F3A;
+  transition: 0.3s all;
 }
 .event__subtitle {
   font-size: 16px;
@@ -1098,7 +1102,7 @@ button:hover {
   display: inline-flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 30px;
+  column-gap: 30px;
 }
 .testimonials-carousel__text {
   width: 752px;
