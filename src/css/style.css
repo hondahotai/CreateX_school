@@ -1092,6 +1092,19 @@ button:hover {
   padding-top: 80px;
 }
 
+.testimonials-wrap {
+  width: 1020px;
+  height: 344px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.testimonials-inner {
+  display: flex;
+  gap: 30px;
+  transition: 0.5s all;
+}
+
 .testimonials-carousel {
   width: 1020px;
   height: 344px;
@@ -1213,6 +1226,10 @@ section.testimonials {
   align-self: flex-end;
   position: relative;
   top: -57px;
+}
+.blog__heading a {
+  display: flex;
+  align-self: flex-end;
 }
 .blog__container {
   display: grid;

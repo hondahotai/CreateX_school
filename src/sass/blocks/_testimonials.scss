@@ -7,6 +7,17 @@
   }
 }
 
+.testimonials-wrap {
+  width: 1020px;
+  height: 344px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.testimonials-inner {
+  display: flex;
+  gap: 30px;
+  transition: 0.5s all;
+}
 .testimonials-carousel {
   width: 1020px;
   height: 344px;

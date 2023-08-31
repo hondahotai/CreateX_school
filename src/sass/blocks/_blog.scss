@@ -10,6 +10,10 @@
       position: relative;
       top: -57px;
     }
+    a {
+      display: flex;
+      align-self: flex-end;
+    }
   }
   &__container {
     display: grid;

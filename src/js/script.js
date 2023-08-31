@@ -122,65 +122,110 @@ window.addEventListener('DOMContentLoaded', () => {
         changeWindowModal();
 
         // tab benefits
-        const tabItem = document.querySelectorAll('.tab__item'),
-              tabParent = document.querySelector('.tabitems'),
-              tabContent = document.querySelectorAll('.tab__content');
 
-        function hideTabContent () {
-            tabContent.forEach(item => {
-               item.classList.add('hidden');
-               item.classList.remove('show');
-            });
+       function tabBenefits(itemSelector, parentSelector, contentSelector) {
+           const tabItem = document.querySelectorAll(itemSelector),
+               tabParent = document.querySelector(parentSelector),
+               tabContent = document.querySelectorAll(contentSelector);
 
-            tabItem.forEach(item => {
-               item.classList.remove('tab__item_active');
-            });
-        }
+           function hideTabContent () {
+               tabContent.forEach(item => {
+                   item.classList.add('hidden');
+                   item.classList.remove('show');
+               });
 
-        function showTabContent (i = 0) {
-            tabContent[i].classList.add('show');
-            tabContent[i].classList.remove('hidden');
-            tabItem[i].classList.add('tab__item_active');
-        }
-        hideTabContent();
-        showTabContent();
-
-        tabParent.addEventListener('click', (e) => {
-           let target = e.target;
-
-           if (target && target.classList.contains('tab__item')) {
-               tabItem.forEach((item, i) => {
-                  if (target === item) {
-                      hideTabContent();
-                      showTabContent(i);
-                  }
+               tabItem.forEach(item => {
+                   item.classList.remove('tab__item_active');
                });
            }
-        });
 
-        // slider cards (team section)
-        const prev = document.querySelector('.team__slider-prev'),
-              next = document.querySelector('.team__slider-next'),
-              slideInner = document.querySelector('.team__slider-inner');
-
-        let offset = 0;
-        slideInner.style.transition = '0.5s all';
-
-        next.addEventListener('click', () => {
-           offset = offset + 315;
-           if (offset > 1260) {
-               offset = 0;
+           function showTabContent (i = 0) {
+               tabContent[i].classList.add('show');
+               tabContent[i].classList.remove('hidden');
+               tabItem[i].classList.add('tab__item_active');
            }
-            slideInner.style.transform = `translateX(-${offset}px)`;
-        });
+           hideTabContent();
+           showTabContent();
 
-        prev.addEventListener('click', () => {
-           offset = offset - 315;
-           if (offset < 0) {
-               offset = 1260;
-           }
-            slideInner.style.transform = `translateX(-${offset}px)`;
-        });
+           tabParent.addEventListener('click', (e) => {
+               let target = e.target;
 
+               if (target && target.classList.contains('tab__item')) {
+                   tabItem.forEach((item, i) => {
+                       if (target === item) {
+                           hideTabContent();
+                           showTabContent(i);
+                       }
+                   });
+               }
+           });
+       }
+       tabBenefits('.tab__item', '.tabitems', '.tab__content');
+
+
+       // slider cards (team section)
+        function sliderCards(prevSelector, nextSelector, inner) {
+            const prev = document.querySelector(prevSelector),
+                next = document.querySelector(nextSelector),
+                slideInner = document.querySelector(inner);
+
+            let offset = 0;
+            slideInner.style.transition = '0.5s all';
+
+            next.addEventListener('click', () => {
+                offset = offset + 315;
+                if (offset > 1260) {
+                    offset = 0;
+                }
+                slideInner.style.transform = `translateX(-${offset}px)`;
+            });
+
+            prev.addEventListener('click', () => {
+                offset = offset - 315;
+                if (offset < 0) {
+                    offset = 1260;
+                }
+                slideInner.style.transform = `translateX(-${offset}px)`;
+            });
+        }
+        sliderCards('.team__slider-prev', '.team__slider-next', '.team__slider-inner')
+
+        // slider testimonials
+        function sliderTestrimonials() {
+            const inner = document.querySelector('.testimonials-inner'),
+                  prev = document.querySelector('.testimonials-prev'),
+                  next = document.querySelector('.testimonials-next'),
+                  firstDot = document.querySelector('#first'),
+                  secondDot = document.querySelector('#second');
+
+            let offset = 0;
+            let indexDots = 0;
+            inner.style.transition = '0.5s all';
+
+            next.addEventListener('click', () => {
+                offset = offset + 1020;
+                firstDot.classList.remove('testimonials-dots-active');
+                secondDot.classList.add('testimonials-dots-active');
+                if (offset > 1020) {
+                    offset = 0;
+                    firstDot.classList.add('testimonials-dots-active');
+                    secondDot.classList.remove('testimonials-dots-active');
+                }
+                inner.style.transform = `translateX(-${offset}px)`;
+            });
+
+            prev.addEventListener('click', () => {
+                offset = offset - 1020;
+                firstDot.classList.add('testimonials-dots-active');
+                secondDot.classList.remove('testimonials-dots-active');
+                if (offset < 0) {
+                    offset = 1020;
+                    firstDot.classList.remove('testimonials-dots-active');
+                    secondDot.classList.add('testimonials-dots-active');
+                }
+                inner.style.transform = `translateX(-${offset}px)`;
+            });
+        }
+    sliderTestrimonials();
 });
 
