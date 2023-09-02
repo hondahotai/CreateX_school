@@ -188,7 +188,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 slideInner.style.transform = `translateX(-${offset}px)`;
             });
         }
-        sliderCards('.team__slider-prev', '.team__slider-next', '.team__slider-inner')
+        sliderCards('.team__slider-prev', '.team__slider-next', '.team__slider-inner');
 
         // slider testimonials
         function sliderTestrimonials() {
@@ -227,5 +227,13 @@ window.addEventListener('DOMContentLoaded', () => {
             });
         }
     sliderTestrimonials();
+
+        //forms
+        document.querySelector('.subscribe__form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            let form = e.target;
+
+            form.classList.add('submited');
+        });
 });
 

@@ -133,6 +133,8 @@
   line-height: 160%;
   color: var(--gray-600, #9A9CA5);
   text-align: center;
+  border: 1px solid var(--primary, #ffffff);
+
   sup {
     font-size: 10px;
     font-style: normal;
@@ -142,11 +144,14 @@
   &_active {
     border: 1px solid var(--primary, #FF3F3A);
     color: #FF3F3AFF;
+    transition: 0.3s all;
   }
   &-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 4px;
+    position: relative;
+    z-index: -1000;
   }
 }
 
@@ -198,6 +203,22 @@
   border: 1px solid var(--gray-300, #E5E8ED);
   background: var(--white, #FFF);
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  animation: shows 0.3s;
+  @keyframes shows {
+
+    from {
+
+      opacity: 0;
+
+    }
+
+    to {
+
+      opacity: 1;
+
+    }
+
+  }
   &:hover {
     transform: scale(1.03);
     transition: 0.2s all;

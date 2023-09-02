@@ -83,12 +83,11 @@ h1 {
 .show {
   display: block;
   visibility: visible;
-  opacity: 1;
   transition: all 0.3s;
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .hidden {
@@ -104,6 +103,25 @@ button:hover {
   transform: scale(1.015);
   transition: 0.3s all;
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.25), 0px 12px 10px -6px rgba(154, 156, 165, 0.25), 0px 30px 24px -10px rgba(154, 156, 165, 0.24), 0px 80px 80px -20px rgba(154, 156, 165, 0.24);
+}
+
+.subscribe__form.submited input:invalid {
+  border-radius: 4px;
+  border: 1px solid var(--danger, #FF4242);
+  background: var(--white, #FFF);
+  background-image: url("../icons/form-default-danger.png");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+.subscribe__form.submited input:valid {
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  background: var(--white, #FFF);
+  background-image: url("../icons/form-default-Mark.png");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
 }
 
 .btn {
@@ -560,6 +578,7 @@ button:hover {
   line-height: 160%;
   color: var(--gray-600, #9A9CA5);
   text-align: center;
+  border: 1px solid var(--primary, #ffffff);
 }
 .courses-tab__item sup {
   font-size: 10px;
@@ -570,11 +589,14 @@ button:hover {
 .courses-tab__item_active {
   border: 1px solid var(--primary, #FF3F3A);
   color: #ff3f3a;
+  transition: 0.3s all;
 }
 .courses-tab__item-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 4px;
+  position: relative;
+  z-index: -1000;
 }
 
 .courses-tab__search {
@@ -622,6 +644,15 @@ button:hover {
   border: 1px solid var(--gray-300, #E5E8ED);
   background: var(--white, #FFF);
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  animation: shows 0.3s;
+}
+@keyframes shows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .card-item:hover {
   transform: scale(1.03);
