@@ -626,7 +626,6 @@ button:hover {
 .card-container {
   display: grid;
   width: 1230px;
-  height: 1374px;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
