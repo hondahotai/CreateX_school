@@ -60,12 +60,16 @@ function dropdownButton() {
 //forms
 
 function forms () {
-    document.querySelector('.subscribe__form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        let form = e.target;
+   try {
+       document.querySelector('.subscribe__form').addEventListener('submit', function (e) {
+           e.preventDefault();
+           let form = e.target;
 
-        form.classList.add('submited');
-    });
+           form.classList.add('submited');
+       });
+   } catch (e) {
+       console.log(e.name);
+   }
 }
 
 module.exports = forms;
@@ -199,70 +203,80 @@ function scrollNavbar() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   sliderCards: () => (/* binding */ sliderCards),
-/* harmony export */   sliderTestrimonials: () => (/* binding */ sliderTestrimonials)
+/* harmony export */   sliderTestimonials: () => (/* binding */ sliderTestimonials)
 /* harmony export */ });
 
 // slider cards (team section)
 function sliderCards(prevSelector, nextSelector, inner) {
-    const prev = document.querySelector(prevSelector),
-        next = document.querySelector(nextSelector),
-        slideInner = document.querySelector(inner);
+    try {
+        const prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector),
+            slideInner = document.querySelector(inner);
 
-    let offset = 0;
-    slideInner.style.transition = '0.5s all';
+        let offset = 0;
+        slideInner.style.transition = '0.5s all';
 
-    next.addEventListener('click', () => {
-        offset = offset + 315;
-        if (offset > 1260) {
-            offset = 0;
-        }
-        slideInner.style.transform = `translateX(-${offset}px)`;
-    });
+        next.addEventListener('click', () => {
+            offset = offset + 315;
+            if (offset > 1260) {
+                offset = 0;
+            }
+            slideInner.style.transform = `translateX(-${offset}px)`;
+        });
 
-    prev.addEventListener('click', () => {
-        offset = offset - 315;
-        if (offset < 0) {
-            offset = 1260;
-        }
-        slideInner.style.transform = `translateX(-${offset}px)`;
-    });
+        prev.addEventListener('click', () => {
+            offset = offset - 315;
+            if (offset < 0) {
+                offset = 1260;
+            }
+            slideInner.style.transform = `translateX(-${offset}px)`;
+        });
+    } catch (e) {
+        console.log(e.name);
+    }
 }
 
 // slider testimonials
-function sliderTestrimonials() {
-    const inner = document.querySelector('.testimonials-inner'),
-        prev = document.querySelector('.testimonials-prev'),
-        next = document.querySelector('.testimonials-next'),
-        firstDot = document.querySelector('#first'),
-        secondDot = document.querySelector('#second');
+function sliderTestimonials(innerSelector, prevSelector, nextSelector, firstDotSelector, secondDotSelector) {
+    try {
+        const inner = document.querySelector(innerSelector),
+            prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector),
+            firstDot = document.querySelector(firstDotSelector),
+            secondDot = document.querySelector(secondDotSelector);
 
-    let offset = 0;
-    let indexDots = 0;
-    inner.style.transition = '0.5s all';
+        let offset = 0;
+        let indexDots = 0;
+        inner.style.transition = '0.5s all';
 
-    next.addEventListener('click', () => {
-        offset = offset + 1020;
-        firstDot.classList.remove('testimonials-dots-active');
-        secondDot.classList.add('testimonials-dots-active');
-        if (offset > 1020) {
-            offset = 0;
-            firstDot.classList.add('testimonials-dots-active');
-            secondDot.classList.remove('testimonials-dots-active');
-        }
-        inner.style.transform = `translateX(-${offset}px)`;
-    });
-
-    prev.addEventListener('click', () => {
-        offset = offset - 1020;
-        firstDot.classList.add('testimonials-dots-active');
-        secondDot.classList.remove('testimonials-dots-active');
-        if (offset < 0) {
-            offset = 1020;
+        next.addEventListener('click', () => {
+            offset = offset + 1020;
             firstDot.classList.remove('testimonials-dots-active');
             secondDot.classList.add('testimonials-dots-active');
-        }
-        inner.style.transform = `translateX(-${offset}px)`;
-    });
+            if (offset > 1020) {
+                offset = 0;
+                firstDot.classList.add('testimonials-dots-active');
+                secondDot.classList.remove('testimonials-dots-active');
+            }
+            inner.style.transform = `translateX(-${offset}px)`;
+        });
+
+        prev.addEventListener('click', () => {
+            offset = offset - 1020;
+            firstDot.classList.add('testimonials-dots-active');
+            secondDot.classList.remove('testimonials-dots-active');
+            if (offset < 0) {
+                offset = 1020;
+                firstDot.classList.remove('testimonials-dots-active');
+                secondDot.classList.add('testimonials-dots-active');
+            }
+            inner.style.transform = `translateX(-${offset}px)`;
+        });
+    } catch (e) {
+        console.log(e.name);
+    }
+
+
 }
 
 
@@ -284,82 +298,90 @@ __webpack_require__.r(__webpack_exports__);
 // tab benefits
 
 function tabBenefits(itemSelector, parentSelector, contentSelector) {
-    const tabItem = document.querySelectorAll(itemSelector),
-        tabParent = document.querySelector(parentSelector),
-        tabContent = document.querySelectorAll(contentSelector);
+    try {
+        const tabItem = document.querySelectorAll(itemSelector),
+            tabParent = document.querySelector(parentSelector),
+            tabContent = document.querySelectorAll(contentSelector);
 
-    function hideTabContent () {
-        tabContent.forEach(item => {
-            item.classList.add('hidden');
-            item.classList.remove('show');
-        });
+        function hideTabContent () {
+            tabContent.forEach(item => {
+                item.classList.add('hidden');
+                item.classList.remove('show');
+            });
 
-        tabItem.forEach(item => {
-            item.classList.remove('tab__item_active');
-        });
-    }
-
-    function showTabContent (i = 0) {
-        tabContent[i].classList.add('show');
-        tabContent[i].classList.remove('hidden');
-        tabItem[i].classList.add('tab__item_active');
-    }
-    hideTabContent();
-    showTabContent();
-
-    tabParent.addEventListener('click', (e) => {
-        let target = e.target;
-
-        if (target && target.classList.contains('tab__item')) {
-            tabItem.forEach((item, i) => {
-                if (target === item) {
-                    hideTabContent();
-                    showTabContent(i);
-                }
+            tabItem.forEach(item => {
+                item.classList.remove('tab__item_active');
             });
         }
-    });
+
+        function showTabContent (i = 0) {
+            tabContent[i].classList.add('show');
+            tabContent[i].classList.remove('hidden');
+            tabItem[i].classList.add('tab__item_active');
+        }
+        hideTabContent();
+        showTabContent();
+
+        tabParent.addEventListener('click', (e) => {
+            let target = e.target;
+
+            if (target && target.classList.contains('tab__item')) {
+                tabItem.forEach((item, i) => {
+                    if (target === item) {
+                        hideTabContent();
+                        showTabContent(i);
+                    }
+                });
+            }
+        });
+    } catch (e) {
+        console.log(e.name);
+    }
 }
 
 
 //tabs (courses page)
 function tabsCourses() {
-    const tabsParent = document.querySelector('.courses-tabs'),
-        tabsItems = document.querySelectorAll('.courses-tab__item'),
-        tabsContent = document.querySelectorAll('.card-item');
-    let tabTextContent = 'All';
+   try {
+       const tabsParent = document.querySelector('.courses-tabs'),
+           tabsItems = document.querySelectorAll('.courses-tab__item'),
+           tabsContent = document.querySelectorAll('.card-item');
+       let tabTextContent = 'All';
 
-    tabsParent.addEventListener('click', (e) => {
-        if (e.target && e.target.classList.contains('courses-tab__item')) {
-            tabsItems.forEach(item => {
-                item.classList.remove('courses-tab__item_active');
-                if (e.target === item) {
-                    item.classList.add('courses-tab__item_active');
-                    tabTextContent = e.target.textContent;
-                    tabTextContent = tabTextContent.replace(/[0-9\s]/g, '');
-                    console.log(tabTextContent);
-                    // console.log(tabsContentBadge[1].innerHTML !== tabTextContent);
-                    filterCards(tabTextContent);
-                }
-            })
-        }
-    });
+       tabsParent.addEventListener('click', (e) => {
+           if (e.target && e.target.classList.contains('courses-tab__item')) {
+               tabsItems.forEach(item => {
+                   item.classList.remove('courses-tab__item_active');
+                   if (e.target === item) {
+                       item.classList.add('courses-tab__item_active');
+                       tabTextContent = e.target.textContent;
+                       tabTextContent = tabTextContent.replace(/[0-9\s]/g, '');
+                       console.log(tabTextContent);
+                       // console.log(tabsContentBadge[1].innerHTML !== tabTextContent);
+                       filterCards(tabTextContent);
+                   }
+               })
+           }
+       });
 
 
-    function filterCards (str) {
-        for (let i = 0; i < tabsContent.length; i++) {
-            if (str === tabsItems[0].textContent.trim().slice(0, 3)) {
-                tabsContent.forEach(item => {
-                    item.classList.remove('hide');
-                });
-            }
-            if (tabsContent[i].children[1].children[0].textContent.trim().replaceAll(' ', '') === str) {
-                tabsContent[i].classList.remove('hide');
-            } else {
-                tabsContent[i].classList.add('hide');
-            }
-        }
-    }
+       function filterCards (str) {
+           for (let i = 0; i < tabsContent.length; i++) {
+               if (str === tabsItems[0].textContent.trim().slice(0, 3)) {
+                   tabsContent.forEach(item => {
+                       item.classList.remove('hide');
+                   });
+               }
+               if (tabsContent[i].children[1].children[0].textContent.trim().replaceAll(' ', '') === str) {
+                   tabsContent[i].classList.remove('hide');
+               } else {
+                   tabsContent[i].classList.add('hide');
+               }
+           }
+       }
+   } catch (e) {
+       console.log(e.name);
+   }
 }
 
 
@@ -466,7 +488,7 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_3__["default"])();
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderCards)('.team__slider-prev', '.team__slider-next', '.team__slider-inner');
-    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderTestrimonials)();
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderTestimonials)('.testimonials-inner', '.testimonials-prev', '.testimonials-next', '#first', '#second');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabBenefits)('.tab__item', '.tabitems', '.tab__content');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabsCourses)();
 });

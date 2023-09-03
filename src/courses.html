@@ -237,19 +237,40 @@
                 <h2 class="title__big">What our students say</h2>
             </div>
 
-            <div class="testimonials-carousel">
-                <div class="testimonials-carousel__content">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
-                        <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
-                        <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
-                    </svg>
-                    <div class="testimonials-carousel__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.                        </div>
-                    <div class="testimonials-carousel__profile">
-                        <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
-                        <div class="testimonials-carousel__profile-wrapper">
-                            <div class="testimonials-carousel__name">Eleanor Pena</div>
-                            <div class="testimonials-carousel__position">Position, Course</div>
+            <div class="testimonials-wrap">
+                <div class="testimonials-inner">
+                    <div class="testimonials-carousel">
+                        <div class="testimonials-carousel__content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                                <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
+                                <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
+                            </svg>
+                            <div class="testimonials-carousel__text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.                        </div>
+                            <div class="testimonials-carousel__profile">
+                                <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
+                                <div class="testimonials-carousel__profile-wrapper">
+                                    <div class="testimonials-carousel__name">Eleanor Pena</div>
+                                    <div class="testimonials-carousel__position">Position, Course</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonials-carousel">
+                        <div class="testimonials-carousel__content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                                <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
+                                <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
+                            </svg>
+                            <div class="testimonials-carousel__text">
+                                Vero dolores exercitationem quidem eum sit accusamus. Quisquam cumque nesciunt fugiat quae delectus quo earum deleniti, labore odio sint recusandae aperiam aut nemo placeat pariatur beatae dignissimos amet quos! A ipsam soluta possimus quisquam commodi natus nam aperiam ratione deleniti.</div>
+                            <div class="testimonials-carousel__profile">
+                                <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
+                                <div class="testimonials-carousel__profile-wrapper">
+                                    <div class="testimonials-carousel__name">Courtney Alexander</div>
+                                    <div class="testimonials-carousel__position">Position, Course</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -270,11 +291,9 @@
             </div>
 
             <div class="testimonials-dots__wrapper">
-                <div class="testimonials-dots testimonials-dots-active"></div>
-                <div class="testimonials-dots"></div>
-                <div class="testimonials-dots"></div>
-                <div class="testimonials-dots"></div>
-                <div class="testimonials-dots"></div>
+                <div id="first" class="testimonials-dots testimonials-dots-active"></div>
+                <div id="second" class="testimonials-dots"></div>
+
             </div>
         </div>
     </section>
@@ -307,8 +326,8 @@
                 <h2 class="title__big">Subscribe to the Createx School <br>announcements</h2>
             </div>
 
-            <form action="#" class="subscribe__form">
-                <input required placeholder="Your working email" type="text" name="email" class="subscribe__input">
+            <form action="#" class="subscribe__form" novalidate>
+                <input required placeholder="Your working email" type="email" name="email" class="subscribe__input">
                 <button class="btn btn_large">Subscribe</button>
             </form>
 
@@ -393,22 +412,22 @@
                 <div class="footer__sitemap">
                     <h6 class="title title-footer">SITE MAP</h6>
                     <div class="footer__links">
-                        <a href="#">About Us</a>
-                        <a href="#">Courses</a>
-                        <a href="#">Events</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Contacts</a>
+                        <a href="about-us.html">About Us</a>
+                        <a href="courses.html">Courses</a>
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blog</a>
+                        <a href="contacts.html">Contacts</a>
                     </div>
                 </div>
 
                 <div class="footer__courses">
                     <h6 class="title title-footer">COURSES</h6>
                     <div class="footer__links">
-                        <a href="#">Marketing</a>
-                        <a href="#">Management</a>
-                        <a href="#">HR & Recruting</a>
-                        <a href="#">Design</a>
-                        <a href="#">Development</a>
+                        <a href="courses.html">Marketing</a>
+                        <a href="courses.html">Management</a>
+                        <a href="courses.html">HR & Recruting</a>
+                        <a href="courses.html">Design</a>
+                        <a href="courses.html">Development</a>
                     </div>
                 </div>
 
@@ -573,6 +592,6 @@
             </div>
         </div>
     </div>
-    <script src="js/modules/courses.js"></script>
+    <script src="js/bundle.js"></script>
 </body>
 </html>
