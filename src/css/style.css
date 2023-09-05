@@ -105,7 +105,7 @@ button:hover {
   box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.25), 0px 12px 10px -6px rgba(154, 156, 165, 0.25), 0px 30px 24px -10px rgba(154, 156, 165, 0.24), 0px 80px 80px -20px rgba(154, 156, 165, 0.24);
 }
 
-.subscribe__form.submited input:invalid {
+.submited input:invalid {
   border-radius: 4px;
   border: 1px solid var(--danger, #FF4242);
   background: var(--white, #FFF);
@@ -114,7 +114,7 @@ button:hover {
   background-position: 96% 50%;
 }
 
-.subscribe__form.submited input:valid {
+.submited input:valid {
   border-radius: 4px;
   outline: none;
   border: none;
@@ -1872,11 +1872,15 @@ section.testimonials {
 .program__list {
   list-style-type: none;
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 .program__wrapper {
   display: flex;
   align-items: center;
   gap: 20px;
+  cursor: pointer;
 }
 .program__text {
   display: block;
@@ -1886,7 +1890,16 @@ section.testimonials {
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-  margin: 16px 0 24px 40px;
+  transition: 0.3s all;
+  animation: showspan 0.3s linear;
+}
+@keyframes showspan {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .program__lesson {
   color: var(--primary, #FF3F3A);

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/js/modules/dropdown.js":
@@ -7,7 +8,6 @@
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -55,13 +55,18 @@ function dropdownButton() {
 /*!*********************************!*\
   !*** ./src/js/modules/forms.js ***!
   \*********************************/
-/***/ ((module) => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   formPromo: () => (/* binding */ formPromo),
+/* harmony export */   formsSub: () => (/* binding */ formsSub)
+/* harmony export */ });
 //forms
 
-function forms () {
+function formsSub (formSelector) {
    try {
-       document.querySelector('.subscribe__form').addEventListener('submit', function (e) {
+       document.querySelector(formSelector).addEventListener('submit', function (e) {
            e.preventDefault();
            let form = e.target;
 
@@ -72,7 +77,101 @@ function forms () {
    }
 }
 
-module.exports = forms;
+function formPromo (formSelector) {
+    try {
+        document.querySelector(formSelector).addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.log(123);
+            let form = e.target;
+
+            form.classList.add('submited');
+
+        });
+    } catch (e) {
+        console.log(e.name);
+    }
+}
+
+
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/js/modules/lesson.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/lesson.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   toggleLesson: () => (/* binding */ toggleLesson)
+/* harmony export */ });
+function toggleLesson () {
+   const programList = document.querySelectorAll('.program__wrapper'),
+       programItem = document.querySelectorAll('.program__item'),
+       Text = document.querySelectorAll('.program__text'),
+       Mark = document.querySelectorAll('.program__mark'),
+       programTitle = document.querySelectorAll('.program__title'),
+
+       // svg plus/minus
+       minusSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833252 9.99935C0.833252 9.53911 1.20635 9.16602 1.66659 9.16602V9.99935V10.8327C1.20635 10.8327 0.833252 10.4596 0.833252 9.99935ZM18.3333 9.99935L18.3332 10.8327H1.66659V9.99935V9.16602H18.3327L18.3333 9.99935ZM18.3333 9.99935L18.3332 10.8327C18.7934 10.8327 19.1666 10.4596 19.1666 9.99935C19.1666 9.53911 18.793 9.16602 18.3327 9.16602L18.3333 9.99935Z" fill="#FF3F3A"/>
+    </svg>`,
+       plusSvg = ` <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <g clip-path="url(#clip0_2492_17832)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 0.833984C10.4602 0.833984 10.8333 1.20708 10.8333 1.66732V9.16732H18.3333C18.7935 9.16732 19.1666 9.54041 19.1666 10.0007C19.1666 10.4609 18.7935 10.834 18.3333 10.834H10.8333V18.334C10.8333 18.7942 10.4602 19.1673 9.99992 19.1673C9.53968 19.1673 9.16658 18.7942 9.16658 18.334V10.834H1.66659C1.20635 10.834 0.833252 10.4609 0.833252 10.0007C0.833252 9.54041 1.20635 9.16732 1.66659 9.16732H9.16658V1.66732C9.16658 1.20708 9.53968 0.833984 9.99992 0.833984Z" fill="#FF3F3A"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2492_17832">
+                                        <rect width="20" height="20" fill="white"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>`;
+
+
+// toggle items
+
+
+   programList.forEach((lesson, i) => {
+      Text.forEach((item, i) => {
+         if (i === 0) {
+            item.classList.remove('hide');
+         } else {
+            item.classList.add('hide');
+         }
+      })
+      lesson.addEventListener('click', (e) => {
+         changeItem();
+         Text[i].classList.toggle('hide');
+         changeMark();
+      });
+   });
+
+function changeMark () {
+   Text.forEach((item, j) => {
+      // item.classList.add('hide');
+      if (item.classList.contains('hide')) {
+         Mark[j].innerHTML = `${plusSvg}`;
+         programTitle[j].style.cssText = `color: #1E212C`;
+      } else {
+         Mark[j].innerHTML = `${minusSvg}`;
+         programTitle[j].style.cssText = `color: #FF3F3A`;
+
+      }
+   })
+}
+
+function changeItem() {
+   Text.forEach((item, i) => {
+      item.classList.add('hide');
+   });
+}
+
+}
 
 
 /***/ }),
@@ -83,7 +182,6 @@ module.exports = forms;
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -167,7 +265,6 @@ function modal() {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
@@ -199,7 +296,6 @@ function scrollNavbar() {
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   sliderCards: () => (/* binding */ sliderCards),
@@ -289,7 +385,6 @@ function sliderTestimonials(innerSelector, prevSelector, nextSelector, firstDotS
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   tabBenefits: () => (/* binding */ tabBenefits),
@@ -388,6 +483,70 @@ function tabsCourses() {
 
 
 
+/***/ }),
+
+/***/ "./src/js/modules/timer.js":
+/*!*********************************!*\
+  !*** ./src/js/modules/timer.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// timer
+
+// const deadline = '2023-09-30';
+// timer remaining. return obj
+
+function timer () {
+    try {
+        function getTimeRemaining(deadline) {
+            const t = Date.parse(deadline) - new Date(),
+                days = Math.floor ( (t/(1000*60*60*24)) ),
+                hours = Math.floor ( (t/(1000*60*60) % 24) ),
+                minutes = Math.floor ( (t/1000/60) % 60),
+                seconds = Math.floor ( (t/1000) % 60);
+
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds,
+            }
+        }
+
+        function setClock (selector, deadline) {
+            const timer = document.querySelector(selector),
+                days = timer.querySelector('#days'),
+                hours = timer.querySelector('#hours'),
+                minutes = timer.querySelector('#minutes'),
+                seconds = timer.querySelector('#seconds'),
+                timeInterval = setInterval(updateClock, 1000);
+            updateClock ()
+
+            function updateClock () {
+                const t = getTimeRemaining(deadline);
+                days.innerHTML = t.days;
+                hours.innerHTML = t.hours;
+                minutes.innerHTML = t.minutes;
+                seconds.innerHTML = t.seconds;
+            }
+
+        }
+        setClock('.promo__countdown', '2023-09-30');
+    } catch (e) {
+        console.log(e.name);
+        console.log(e);
+    }
+
+}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (timer);
+
 /***/ })
 
 /******/ 	});
@@ -417,18 +576,6 @@ function tabsCourses() {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/compat get default export */
-/******/ 	(() => {
-/******/ 		// getDefaultExport function for compatibility with non-harmony modules
-/******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
-/******/ 				() => (module['default']) :
-/******/ 				() => (module);
-/******/ 			__webpack_require__.d(getter, { a: getter });
-/******/ 			return getter;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -459,20 +606,22 @@ function tabsCourses() {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/forms */ "./src/js/modules/forms.js");
-/* harmony import */ var _modules_forms__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_forms__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_dropdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/dropdown */ "./src/js/modules/dropdown.js");
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/modal */ "./src/js/modules/modal.js");
 /* harmony import */ var _modules_navbar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/navbar */ "./src/js/modules/navbar.js");
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
+/* harmony import */ var _modules_timer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/timer */ "./src/js/modules/timer.js");
+/* harmony import */ var _modules_lesson__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/lesson */ "./src/js/modules/lesson.js");
+
+
 
 
 
@@ -483,7 +632,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.addEventListener('DOMContentLoaded', () => {
-    _modules_forms__WEBPACK_IMPORTED_MODULE_0___default()();
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formsSub)('.subscribe__form');
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formPromo)('.promo__form');
     (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])();
     (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_3__["default"])();
@@ -491,6 +641,8 @@ window.addEventListener('DOMContentLoaded', () => {
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderTestimonials)('.testimonials-inner', '.testimonials-prev', '.testimonials-next', '#first', '#second');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabBenefits)('.tab__item', '.tabitems', '.tab__content');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabsCourses)();
+    (0,_modules_timer__WEBPACK_IMPORTED_MODULE_6__["default"])();
+    (0,_modules_lesson__WEBPACK_IMPORTED_MODULE_7__.toggleLesson)();
 });
 
 
