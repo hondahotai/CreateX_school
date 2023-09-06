@@ -28,3 +28,18 @@
     text-transform: uppercase;
   }
 }
+
+.toolbar-button-wrap {
+  background: white;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 100;
+  svg.active path {
+    fill: #FF3F3A;
+  }
+  svg {
+    position: relative;
+    z-index: -1000;
+  }
+}

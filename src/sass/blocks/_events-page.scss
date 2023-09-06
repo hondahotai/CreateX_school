@@ -180,3 +180,17 @@
     }
   }
 }
+
+.events__wrapper_grid-mini {
+  display: grid;
+  width: 315%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  overflow: hidden !important;
+}
+.events__inner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 390px;
+}

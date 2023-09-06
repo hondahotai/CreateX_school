@@ -474,19 +474,40 @@
                         <h2 class="title__big">What our students say</h2>
                     </div>
 
-                    <div class="testimonials-carousel">
-                        <div class="testimonials-carousel__content">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
-                                <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
-                                <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
-                            </svg>
-                            <div class="testimonials-carousel__text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.                        </div>
-                            <div class="testimonials-carousel__profile">
-                                <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
-                                <div class="testimonials-carousel__profile-wrapper">
-                                    <div class="testimonials-carousel__name">Eleanor Pena</div>
-                                    <div class="testimonials-carousel__position">Position, Course</div>
+                    <div class="testimonials-wrap">
+                        <div class="testimonials-inner">
+                            <div class="testimonials-carousel">
+                                <div class="testimonials-carousel__content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                                        <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
+                                        <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
+                                    </svg>
+                                    <div class="testimonials-carousel__text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.                        </div>
+                                    <div class="testimonials-carousel__profile">
+                                        <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
+                                        <div class="testimonials-carousel__profile-wrapper">
+                                            <div class="testimonials-carousel__name">Eleanor Pena</div>
+                                            <div class="testimonials-carousel__position">Position, Course</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials-carousel">
+                                <div class="testimonials-carousel__content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 28 20" fill="none">
+                                        <path d="M18 8.92534C18 8.63119 18.1295 8.35196 18.3541 8.16195L28 0V19C28 19.5523 27.5523 20 27 20H19C18.4477 20 18 19.5523 18 19V8.92534Z" fill="#FF3F3A"/>
+                                        <path d="M0 8.92534C0 8.63119 0.129507 8.35196 0.354058 8.16195L10 0V19C10 19.5523 9.55228 20 9 20H1C0.447715 20 0 19.5523 0 19V8.92534Z" fill="#FF3F3A"/>
+                                    </svg>
+                                    <div class="testimonials-carousel__text">
+                                        Vero dolores exercitationem quidem eum sit accusamus. Quisquam cumque nesciunt fugiat quae delectus quo earum deleniti, labore odio sint recusandae aperiam aut nemo placeat pariatur beatae dignissimos amet quos! A ipsam soluta possimus quisquam commodi natus nam aperiam ratione deleniti.</div>
+                                    <div class="testimonials-carousel__profile">
+                                        <img src="img/testimonials/profile.png" alt="profile" class="testimonials-carousel__photo">
+                                        <div class="testimonials-carousel__profile-wrapper">
+                                            <div class="testimonials-carousel__name">Courtney Alexander</div>
+                                            <div class="testimonials-carousel__position">Position, Course</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -507,11 +528,9 @@
                     </div>
 
                     <div class="testimonials-dots__wrapper">
-                        <div class="testimonials-dots testimonials-dots-active"></div>
-                        <div class="testimonials-dots"></div>
-                        <div class="testimonials-dots"></div>
-                        <div class="testimonials-dots"></div>
-                        <div class="testimonials-dots"></div>
+                        <div id="first" class="testimonials-dots testimonials-dots-active"></div>
+                        <div id="second" class="testimonials-dots"></div>
+
                     </div>
                 </div>
 
@@ -522,7 +541,7 @@
                             <div class="title">Leave a request now and get 20% off!</div>
                             <div class="title__big">Register for the course</div>
                         </div>
-                        <form action="#" class="reg__form">
+                        <form action="#" class="reg__form" novalidate>
                             <div class="input__wrap">
                                 <label>Full name
                                     <input required placeholder="Your full name" type="text" name="fullName">
@@ -535,7 +554,7 @@
                             </div>
                             <div class="input__wrap">
                                 <label>Phone
-                                    <input required placeholder="Your phone number" type="number" name="phone">
+                                    <input placeholder="Your phone number" type="number" name="phone">
                                 </label>
                             </div>
                             <button class="btn btn_regular">Join the course</button>
@@ -598,79 +617,79 @@
                         </div>
                     </div>
 
-<!--                    <div class="card">-->
-<!--                        <div class="card__image">-->
-<!--                            <img src="img/cards/card-image_Leslie.png" alt="photo">-->
-<!--                        </div>-->
-<!--                        <div class="card__wrapper">-->
-<!--                            <div class="card__border card__border_orange">-->
-<!--                                <div class="card__subject">HR & Recruting</div>-->
-<!--                            </div>-->
-<!--                            <div class="card__subtitle">HR  Management and Analytics</div>-->
-<!--                            <div class="card__info">-->
-<!--                                <div class="card__price">$200</div>-->
-<!--                                <div class="card__divider"></div>-->
-<!--                                <div class="card__autor">by Leslie Alexander Li</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Leslie.png" alt="photo">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_orange">
+                                <div class="card__subject">HR & Recruting</div>
+                            </div>
+                            <div class="card__subtitle">HR  Management and Analytics</div>
+                            <div class="card__info">
+                                <div class="card__price">$200</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Leslie Alexander Li</div>
+                            </div>
+                        </div>
+                    </div>
 
-<!--                    <div class="card">-->
-<!--                        <div class="card__image">-->
-<!--                            <img src="img/cards/card-image_Kristin.png" alt="photo">-->
-<!--                        </div>-->
-<!--                        <div class="card__wrapper">-->
-<!--                            <div class="card__border card__border_green">-->
-<!--                                <div class="card__subject">Marketing</div>-->
-<!--                            </div>-->
-<!--                            <div class="card__subtitle">Brand Management & PR Communications</div>-->
-<!--                            <div class="card__info">-->
-<!--                                <div class="card__price">$530</div>-->
-<!--                                <div class="card__divider"></div>-->
-<!--                                <div class="card__autor">by Kristin Watson</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Kristin.png" alt="photo">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_green">
+                                <div class="card__subject">Marketing</div>
+                            </div>
+                            <div class="card__subtitle">Brand Management & PR Communications</div>
+                            <div class="card__info">
+                                <div class="card__price">$530</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Kristin Watson</div>
+                            </div>
+                        </div>
+                    </div>
 
-<!--                    <div class="card">-->
-<!--                        <div class="card__image">-->
-<!--                            <img src="img/cards/card-image_Dianne.png" alt="photo">-->
-<!--                        </div>-->
-<!--                        <div class="card__wrapper">-->
-<!--                            <div class="card__border card__border_blue">-->
-<!--                                <div class="card__subject">Management</div>-->
-<!--                            </div>-->
-<!--                            <div class="card__subtitle">Business Development Management</div>-->
-<!--                            <div class="card__info">-->
-<!--                                <div class="card__price">$400</div>-->
-<!--                                <div class="card__divider"></div>-->
-<!--                                <div class="card__autor">by Dianne Russell</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Dianne.png" alt="photo">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_blue">
+                                <div class="card__subject">Management</div>
+                            </div>
+                            <div class="card__subtitle">Business Development Management</div>
+                            <div class="card__info">
+                                <div class="card__price">$400</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Dianne Russell</div>
+                            </div>
+                        </div>
+                    </div>
 
-<!--                    <div class="card">-->
-<!--                        <div class="card__image">-->
-<!--                            <img src="img/cards/card-image_Guy.png" alt="photo">-->
-<!--                        </div>-->
-<!--                        <div class="card__wrapper">-->
-<!--                            <div class="card__border card__border_red">-->
-<!--                                <div class="card__subject">Design</div>-->
-<!--                            </div>-->
-<!--                            <div class="card__subtitle">Graphic Design Basic</div>-->
-<!--                            <div class="card__info">-->
-<!--                                <div class="card__price">$500</div>-->
-<!--                                <div class="card__divider"></div>-->
-<!--                                <div class="card__autor">by Guy Hawkins</div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
+                    <div class="card">
+                        <div class="card__image">
+                            <img src="img/cards/card-image_Guy.png" alt="photo">
+                        </div>
+                        <div class="card__wrapper">
+                            <div class="card__border card__border_red">
+                                <div class="card__subject">Design</div>
+                            </div>
+                            <div class="card__subtitle">Graphic Design Basic</div>
+                            <div class="card__info">
+                                <div class="card__price">$500</div>
+                                <div class="card__divider"></div>
+                                <div class="card__autor">by Guy Hawkins</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="related-view">
                 <h3>Do you want more courses?</h3>
-                <button class="btn btn_regular">View all courses</button>
+                <a href="courses.html"><button class="btn btn_regular">View all courses</button></a>
             </div>
         </div>
     </section>
@@ -752,22 +771,22 @@
                 <div class="footer__sitemap">
                     <h6 class="title title-footer">SITE MAP</h6>
                     <div class="footer__links">
-                        <a href="#">About Us</a>
-                        <a href="#">Courses</a>
-                        <a href="#">Events</a>
-                        <a href="#">Blog</a>
-                        <a href="#">Contacts</a>
+                        <a href="about-us.html">About Us</a>
+                        <a href="courses.html">Courses</a>
+                        <a href="events.html">Events</a>
+                        <a href="blogs.html">Blog</a>
+                        <a href="contacts.html">Contacts</a>
                     </div>
                 </div>
 
                 <div class="footer__courses">
                     <h6 class="title title-footer">COURSES</h6>
                     <div class="footer__links">
-                        <a href="#">Marketing</a>
-                        <a href="#">Management</a>
-                        <a href="#">HR & Recruting</a>
-                        <a href="#">Design</a>
-                        <a href="#">Development</a>
+                        <a href="courses.html">Marketing</a>
+                        <a href="courses.html">Management</a>
+                        <a href="courses.html">HR & Recruting</a>
+                        <a href="courses.html">Design</a>
+                        <a href="courses.html">Development</a>
                     </div>
                 </div>
 

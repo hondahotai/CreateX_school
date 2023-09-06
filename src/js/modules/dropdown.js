@@ -18,8 +18,8 @@ function dropdownButton() {
         if (i === 1) {
             item.innerHTML = `<a href="#">Events ${dropdownIcon}</a>
                         <div class="dropdown-menu">
-                            <a href="events.html">Events list</a>
-                            <a href="events.html">Events grid</a>
+                            <a href="events.html" id="listView">Events list</a>
+                            <a href="events.html" id="gridView">Events grid</a>
                             <a href="event.html">Event single</a>
                         </div>`;
         }

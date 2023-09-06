@@ -3,12 +3,17 @@
   &-slide__inner {
     display: flex;
     margin-top: 60px;
+    width: 300%;
+    justify-content: center;
   }
   &-view {
     display: flex;
     justify-content: center;
     align-items: baseline;
     gap: 40px;
+  }
+  &-slide__wrapper {
+    overflow: hidden;
   }
 }
 

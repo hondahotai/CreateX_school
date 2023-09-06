@@ -32,8 +32,8 @@ function dropdownButton() {
         if (i === 1) {
             item.innerHTML = `<a href="#">Events ${dropdownIcon}</a>
                         <div class="dropdown-menu">
-                            <a href="events.html">Events list</a>
-                            <a href="events.html">Events grid</a>
+                            <a href="events.html" id="listView">Events list</a>
+                            <a href="events.html" id="gridView">Events grid</a>
                             <a href="event.html">Event single</a>
                         </div>`;
         }
@@ -111,17 +111,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   toggleLesson: () => (/* binding */ toggleLesson)
 /* harmony export */ });
 function toggleLesson () {
-   const programList = document.querySelectorAll('.program__wrapper'),
-       programItem = document.querySelectorAll('.program__item'),
-       Text = document.querySelectorAll('.program__text'),
-       Mark = document.querySelectorAll('.program__mark'),
-       programTitle = document.querySelectorAll('.program__title'),
+   try {
+      const programList = document.querySelectorAll('.program__wrapper'),
+          programItem = document.querySelectorAll('.program__item'),
+          Text = document.querySelectorAll('.program__text'),
+          Mark = document.querySelectorAll('.program__mark'),
+          programTitle = document.querySelectorAll('.program__title'),
 
-       // svg plus/minus
-       minusSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          // svg plus/minus
+          minusSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833252 9.99935C0.833252 9.53911 1.20635 9.16602 1.66659 9.16602V9.99935V10.8327C1.20635 10.8327 0.833252 10.4596 0.833252 9.99935ZM18.3333 9.99935L18.3332 10.8327H1.66659V9.99935V9.16602H18.3327L18.3333 9.99935ZM18.3333 9.99935L18.3332 10.8327C18.7934 10.8327 19.1666 10.4596 19.1666 9.99935C19.1666 9.53911 18.793 9.16602 18.3327 9.16602L18.3333 9.99935Z" fill="#FF3F3A"/>
     </svg>`,
-       plusSvg = ` <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          plusSvg = ` <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                 <g clip-path="url(#clip0_2492_17832)">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99992 0.833984C10.4602 0.833984 10.8333 1.20708 10.8333 1.66732V9.16732H18.3333C18.7935 9.16732 19.1666 9.54041 19.1666 10.0007C19.1666 10.4609 18.7935 10.834 18.3333 10.834H10.8333V18.334C10.8333 18.7942 10.4602 19.1673 9.99992 19.1673C9.53968 19.1673 9.16658 18.7942 9.16658 18.334V10.834H1.66659C1.20635 10.834 0.833252 10.4609 0.833252 10.0007C0.833252 9.54041 1.20635 9.16732 1.66659 9.16732H9.16658V1.66732C9.16658 1.20708 9.53968 0.833984 9.99992 0.833984Z" fill="#FF3F3A"/>
                                 </g>
@@ -136,40 +137,43 @@ function toggleLesson () {
 // toggle items
 
 
-   programList.forEach((lesson, i) => {
-      Text.forEach((item, i) => {
-         if (i === 0) {
-            item.classList.remove('hide');
-         } else {
-            item.classList.add('hide');
-         }
-      })
-      lesson.addEventListener('click', (e) => {
-         changeItem();
-         Text[i].classList.toggle('hide');
-         changeMark();
+      programList.forEach((lesson, i) => {
+         Text.forEach((item, i) => {
+            if (i === 0) {
+               item.classList.remove('hide');
+               programTitle[i].style.cssText = `color: #FF3F3A`;
+            } else {
+               item.classList.add('hide');
+            }
+         })
+         lesson.addEventListener('click', (e) => {
+            changeItem();
+            Text[i].classList.toggle('hide');
+            changeMark();
+         });
       });
-   });
 
-function changeMark () {
-   Text.forEach((item, j) => {
-      // item.classList.add('hide');
-      if (item.classList.contains('hide')) {
-         Mark[j].innerHTML = `${plusSvg}`;
-         programTitle[j].style.cssText = `color: #1E212C`;
-      } else {
-         Mark[j].innerHTML = `${minusSvg}`;
-         programTitle[j].style.cssText = `color: #FF3F3A`;
-
+      function changeMark () {
+         Text.forEach((item, j) => {
+            // item.classList.add('hide');
+            if (item.classList.contains('hide')) {
+               Mark[j].innerHTML = `${plusSvg}`;
+               programTitle[j].style.cssText = `color: #1E212C`;
+            } else {
+               Mark[j].innerHTML = `${minusSvg}`;
+               programTitle[j].style.cssText = `color: #FF3F3A`;
+            }
+         })
       }
-   })
-}
 
-function changeItem() {
-   Text.forEach((item, i) => {
-      item.classList.add('hide');
-   });
-}
+      function changeItem() {
+         Text.forEach((item, i) => {
+            item.classList.add('hide');
+         });
+      }
+   } catch (e) {
+      console.log(e);
+   }
 
 }
 
@@ -267,7 +271,8 @@ function modal() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   eventPageView: () => (/* binding */ eventPageView),
+/* harmony export */   scrollNavbar: () => (/* binding */ scrollNavbar)
 /* harmony export */ });
 // scrolled navbar
 function scrollNavbar() {
@@ -286,7 +291,39 @@ function scrollNavbar() {
     });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrollNavbar);
+// event list/grid
+function eventPageView() {
+    try {
+        const gridView = document.querySelector('#gridView'),
+            ViewButton = document.querySelectorAll('.toolbar-button-wrap'),
+            toolBarBtn = document.querySelectorAll('.toolbar-button'),
+            EventsContentList = document.querySelector('.events__wrapper');
+
+        EventsContentList.style.cssText = `transition: 0.3s all;`;
+
+        ViewButton.forEach((item, i) => {
+            item.addEventListener('click', (e) => {
+                if(i === 0) {
+                    toolBarBtn[0].classList.add('active');
+                    toolBarBtn[1].classList.remove('active');
+                    EventsContentList.classList.remove('events__wrapper_grid');
+                }
+                if(i === 1) {
+                    toolBarBtn[1].classList.add('active');
+                    toolBarBtn[0].classList.remove('active');
+                    EventsContentList.classList.add('events__wrapper_grid');
+                }
+            })
+        })
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+
+
+
+
 
 /***/ }),
 
@@ -298,6 +335,8 @@ function scrollNavbar() {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   miniCards: () => (/* binding */ miniCards),
+/* harmony export */   miniGridCards: () => (/* binding */ miniGridCards),
 /* harmony export */   sliderCards: () => (/* binding */ sliderCards),
 /* harmony export */   sliderTestimonials: () => (/* binding */ sliderTestimonials)
 /* harmony export */ });
@@ -373,6 +412,66 @@ function sliderTestimonials(innerSelector, prevSelector, nextSelector, firstDotS
     }
 
 
+}
+
+function miniCards (innerSelector, prevSelector, nextSelector) {
+    try {
+        const inner = document.querySelector(innerSelector),
+            prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector);
+
+        let offset = 0;
+        inner.style.transition = '0.5s all';
+
+        next.addEventListener('click', () => {
+            offset = offset + 630;
+            if (offset > 2520) {
+                offset = 0;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+
+        prev.addEventListener('click', () => {
+            offset = offset - 630;
+            if (offset < 0) {
+                offset = 2520;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+    } catch (e) {
+        console.log(e);
+        console.log(e.name);
+    }
+}
+
+// cards from events
+function miniGridCards (innerSelector, prevSelector, nextSelector) {
+    try {
+        const inner = document.querySelector(innerSelector),
+            prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector);
+
+        let offset = 0;
+        inner.style.transition = '0.5s all';
+
+        next.addEventListener('click', () => {
+            offset = offset + 420;
+            if (offset > 2520) {
+                offset = 0;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+
+        prev.addEventListener('click', () => {
+            offset = offset - 420;
+            if (offset < 0) {
+                offset = 2520;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 
@@ -631,14 +730,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-window.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formsSub)('.subscribe__form');
     (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formPromo)('.promo__form');
-    (0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"])();
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formPromo)('.reg__form');
+    (0,_modules_forms__WEBPACK_IMPORTED_MODULE_0__.formPromo)('.speaker-promo__form')
+    ;(0,_modules_dropdown__WEBPACK_IMPORTED_MODULE_1__["default"])();
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_2__["default"])();
-    (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_3__["default"])();
+    (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_3__.scrollNavbar)();
+    (0,_modules_navbar__WEBPACK_IMPORTED_MODULE_3__.eventPageView)();
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderCards)('.team__slider-prev', '.team__slider-next', '.team__slider-inner');
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.sliderTestimonials)('.testimonials-inner', '.testimonials-prev', '.testimonials-next', '#first', '#second');
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.miniCards)('.related-slide__inner', '.slider-prev', '.slider-next');
+    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_4__.miniGridCards)('.events__inner', '.slider-prev', '.slider-next');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabBenefits)('.tab__item', '.tabitems', '.tab__content');
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_5__.tabsCourses)();
     (0,_modules_timer__WEBPACK_IMPORTED_MODULE_6__["default"])();

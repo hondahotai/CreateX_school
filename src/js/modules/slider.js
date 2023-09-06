@@ -72,4 +72,64 @@ function sliderTestimonials(innerSelector, prevSelector, nextSelector, firstDotS
 
 }
 
-export {sliderCards, sliderTestimonials};
+function miniCards (innerSelector, prevSelector, nextSelector) {
+    try {
+        const inner = document.querySelector(innerSelector),
+            prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector);
+
+        let offset = 0;
+        inner.style.transition = '0.5s all';
+
+        next.addEventListener('click', () => {
+            offset = offset + 630;
+            if (offset > 2520) {
+                offset = 0;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+
+        prev.addEventListener('click', () => {
+            offset = offset - 630;
+            if (offset < 0) {
+                offset = 2520;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+    } catch (e) {
+        console.log(e);
+        console.log(e.name);
+    }
+}
+
+// cards from events
+function miniGridCards (innerSelector, prevSelector, nextSelector) {
+    try {
+        const inner = document.querySelector(innerSelector),
+            prev = document.querySelector(prevSelector),
+            next = document.querySelector(nextSelector);
+
+        let offset = 0;
+        inner.style.transition = '0.5s all';
+
+        next.addEventListener('click', () => {
+            offset = offset + 420;
+            if (offset > 2520) {
+                offset = 0;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+
+        prev.addEventListener('click', () => {
+            offset = offset - 420;
+            if (offset < 0) {
+                offset = 2520;
+            }
+            inner.style.transform = `translateX(-${offset}px`;
+        });
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+export {sliderCards, sliderTestimonials, miniCards, miniGridCards};

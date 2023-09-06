@@ -1976,12 +1976,17 @@ section.testimonials {
 .related-slide__inner {
   display: flex;
   margin-top: 60px;
+  width: 300%;
+  justify-content: center;
 }
 .related-view {
   display: flex;
   justify-content: center;
   align-items: baseline;
   gap: 40px;
+}
+.related-slide__wrapper {
+  overflow: hidden;
 }
 
 .slider-controls {
@@ -2197,6 +2202,21 @@ section.testimonials {
   color: var(--primary, #FF3F3A);
 }
 
+.events__wrapper_grid-mini {
+  display: grid;
+  width: 315%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  overflow: hidden !important;
+}
+
+.events__inner {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  width: 390px;
+}
+
 .event-page {
   min-height: 468px;
   background: url("../img/Header/background3.jpg") center center/cover no-repeat;
@@ -2225,6 +2245,21 @@ section.testimonials {
   letter-spacing: 1px;
   text-decoration-line: underline;
   text-transform: uppercase;
+}
+
+.toolbar-button-wrap {
+  background: white;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 100;
+}
+.toolbar-button-wrap svg.active path {
+  fill: #FF3F3A;
+}
+.toolbar-button-wrap svg {
+  position: relative;
+  z-index: -1000;
 }
 
 .speaker {
