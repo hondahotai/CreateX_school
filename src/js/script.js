@@ -4,7 +4,7 @@ import dropDown from './modules/dropdown';
 import modal from './modules/modal';
 import {scrollNavbar, eventPageView} from './modules/navbar';
 import {sliderCards, sliderTestimonials, miniCards, miniGridCards} from "./modules/slider";
-import {tabBenefits, tabsCourses} from './modules/tabs';
+import {tabBenefits, tabsCourses, tabsBlogs} from './modules/tabs';
 import timer from './modules/timer';
 import {toggleLesson} from './modules/lesson';
 
@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     miniGridCards('.events__inner', '.slider-prev', '.slider-next');
     tabBenefits('.tab__item', '.tabitems', '.tab__content');
     tabsCourses();
+    tabsBlogs();
     timer();
     toggleLesson();
 });

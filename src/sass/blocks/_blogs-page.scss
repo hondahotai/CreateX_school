@@ -28,6 +28,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    z-index: -10000;
   }
   span {
     color: var(--gray-600, #9A9CA5);
@@ -36,6 +38,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 25.6px */
+    position: relative;
+    z-index: -10000;
   }
   &_active {
     border-radius: 4px;
@@ -125,6 +129,22 @@
   &:hover {
     transform: scale(1.015);
     transition: 0.15s ease-out;
+  }
+  animation: shows 0.7s;
+  @keyframes shows {
+
+    from {
+
+      opacity: 0;
+
+    }
+
+    to {
+
+      opacity: 1;
+
+    }
+
   }
 }
 .blog__text:hover {

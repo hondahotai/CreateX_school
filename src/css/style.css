@@ -1327,6 +1327,7 @@ section.testimonials {
   font-weight: 700;
   line-height: 150%;
   color: #1E212C;
+  cursor: pointer;
 }
 .blog__subtext {
   font-size: 16px;
@@ -2855,6 +2856,8 @@ section.testimonials {
   display: flex;
   align-items: center;
   gap: 8px;
+  position: relative;
+  z-index: -10000;
 }
 .blogs-tab span {
   color: var(--gray-600, #9A9CA5);
@@ -2863,6 +2866,8 @@ section.testimonials {
   font-style: normal;
   font-weight: 700;
   line-height: 160%; /* 25.6px */
+  position: relative;
+  z-index: -10000;
 }
 .blogs-tab_active {
   border-radius: 4px;
@@ -2949,10 +2954,19 @@ section.testimonials {
 
 .blog__item {
   transition: 0.15s ease-in;
+  animation: shows 0.7s;
 }
 .blog__item:hover {
   transform: scale(1.015);
   transition: 0.15s ease-out;
+}
+@keyframes shows {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .blog__text:hover {
