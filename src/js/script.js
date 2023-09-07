@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     formsSub('.subscribe__form');
     formPromo('.promo__form');
     formPromo('.reg__form');
-    formPromo('.speaker-promo__form')
+    formPromo('.speaker-promo__form');
+    formPromo('.contacts__form');
+    formPromo('.modal-form');
+    formPromo('.modal-form_second');
     dropDown();
     modal();
     scrollNavbar();
@@ -22,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderTestimonials('.testimonials-inner', '.testimonials-prev', '.testimonials-next', '#first', '#second');
     miniCards('.related-slide__inner', '.slider-prev', '.slider-next');
     miniGridCards('.events__inner', '.slider-prev', '.slider-next');
+    miniGridCards('.blog-mini__inner', '.slider-prev', '.slider-next');
     tabBenefits('.tab__item', '.tabitems', '.tab__content');
     tabsCourses();
     tabsBlogs();

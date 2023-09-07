@@ -87,11 +87,13 @@
       border: 1px solid var(--gray-400, #D7DADD);
       background: var(--white, #FFF);
       position: relative;
+      z-index: 1000;
     }
     span {
       position: absolute;
       top: 42px;
       right: 14px;
+      z-index: 2000;
     }
   }
 }

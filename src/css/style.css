@@ -116,12 +116,31 @@ button:hover {
 
 .submited input:valid {
   border-radius: 4px;
+  border: 1px solid rgb(3, 206, 164);
   outline: none;
-  border: none;
   background: var(--white, #FFF);
   background-image: url("../icons/form-default-Mark.png");
   background-repeat: no-repeat;
   background-position: 96% 50%;
+}
+
+.submited > #textarea textarea:valid {
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid rgb(3, 206, 164);
+  background: var(--white, #FFF);
+  background-image: url("../icons/form-default-Mark.png");
+  background-repeat: no-repeat;
+  background-position: 96% 50%;
+}
+
+.submited > #textarea textarea:invalid {
+  border-radius: 4px;
+  border: 1px solid var(--danger, #FF4242);
+  background: var(--white, #FFF);
+  background-image: url("../icons/form-default-danger.png");
+  background-repeat: no-repeat;
+  background-position: 98% 10%;
 }
 
 .btn {
@@ -1266,6 +1285,7 @@ section.testimonials {
   grid-template-columns: 390px 390px 390px;
   grid-template-rows: 507px;
   column-gap: 30px;
+  overflow: hidden;
 }
 .blog__badge {
   display: inline-flex;
@@ -1341,6 +1361,12 @@ section.testimonials {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+
+.blog-mini__inner {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
 }
 
 .subscribe {
@@ -3162,6 +3188,10 @@ section.testimonials {
   align-items: center;
   gap: 12px;
 }
+.meta-sharing__socials a:hover svg path {
+  fill: #FF3F3A;
+  transition: 0.3s all;
+}
 
 .article-img {
   padding-bottom: 60px;
@@ -3278,6 +3308,11 @@ blockquote::before {
   font-style: normal;
   font-weight: 700;
   line-height: 150%; /* 21px */
+}
+.article-tags__item:hover {
+  background-color: #FF3F3A;
+  color: white;
+  transition: 0.2s linear;
 }
 
 .blog-sidebar__input {
@@ -3485,6 +3520,10 @@ blockquote::before {
   display: inline-flex;
   align-items: center;
   gap: 32px;
+}
+.contacts-socials a:hover svg path {
+  fill: #FF3F3A;
+  transition: 0.3s all;
 }
 
 .contacts-form {
@@ -3704,11 +3743,13 @@ blockquote::before {
   border: 1px solid var(--gray-400, #D7DADD);
   background: var(--white, #FFF);
   position: relative;
+  z-index: 1000;
 }
 .modal-form > label span {
   position: absolute;
   top: 42px;
   right: 14px;
+  z-index: 2000;
 }
 
 .modal_checkbox {

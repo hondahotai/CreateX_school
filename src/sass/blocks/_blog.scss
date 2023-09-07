@@ -20,6 +20,7 @@
     grid-template-columns: 390px 390px 390px;
     grid-template-rows: 507px;
     column-gap: 30px;
+    overflow: hidden;
   }
   &__badge {
     display: inline-flex;
@@ -96,6 +97,12 @@
     align-items: center;
     gap: 8px;
   }
+}
+
+.blog-mini__inner {
+  display: flex;
+  gap: 32px;
+  justify-content: flex-start;
 }
 
 

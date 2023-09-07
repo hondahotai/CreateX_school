@@ -17,11 +17,15 @@ function formPromo (formSelector) {
     try {
         document.querySelector(formSelector).addEventListener('submit', function (e) {
             e.preventDefault();
-            console.log(123);
             let form = e.target;
 
             form.classList.add('submited');
 
+            if (form.checkValidity()) {
+                form.reset();
+                form.classList.remove('submited');
+                location.reload();
+            }
         });
     } catch (e) {
         console.log(e.name);

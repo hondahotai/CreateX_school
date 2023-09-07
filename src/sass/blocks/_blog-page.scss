@@ -94,6 +94,12 @@
     display: flex;
     align-items: center;
     gap: 12px;
+    a:hover {
+      svg path {
+        fill: #FF3F3A;
+        transition: 0.3s all;
+      }
+    }
   }
 }
 
@@ -206,6 +212,11 @@ blockquote {
     font-style: normal;
     font-weight: 700;
     line-height: 150%; /* 21px */
+    &:hover {
+      background-color: #FF3F3A;
+      color: white;
+      transition: 0.2s linear;
+    }
   }
 }
 

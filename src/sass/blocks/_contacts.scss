@@ -45,4 +45,10 @@
   display: inline-flex;
   align-items: center;
   gap: 32px;
+  a:hover {
+    svg path {
+      fill: #FF3F3A;
+      transition: 0.3s all;
+    }
+  }
 }

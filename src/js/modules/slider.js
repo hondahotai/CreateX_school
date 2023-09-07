@@ -110,11 +110,18 @@ function miniGridCards (innerSelector, prevSelector, nextSelector) {
             next = document.querySelector(nextSelector);
 
         let offset = 0;
+        let maxOffset;
         inner.style.transition = '0.5s all';
+
+        if (inner.children.length === 6) {
+            maxOffset = 1260;
+        } else {
+            maxOffset = 2520;
+        }
 
         next.addEventListener('click', () => {
             offset = offset + 420;
-            if (offset > 2520) {
+            if (offset > maxOffset) {
                 offset = 0;
             }
             inner.style.transform = `translateX(-${offset}px`;
@@ -123,7 +130,7 @@ function miniGridCards (innerSelector, prevSelector, nextSelector) {
         prev.addEventListener('click', () => {
             offset = offset - 420;
             if (offset < 0) {
-                offset = 2520;
+                offset = maxOffset;
             }
             inner.style.transform = `translateX(-${offset}px`;
         });
@@ -131,5 +138,35 @@ function miniGridCards (innerSelector, prevSelector, nextSelector) {
         console.log(e);
     }
 }
+
+// // cards from blog page (carousel)
+// function miniCarousel (innerSelector, prevSelector, nextSelector) {
+//     try {
+//         const inner = document.querySelector(innerSelector),
+//             prev = document.querySelector(prevSelector),
+//             next = document.querySelector(nextSelector);
+//
+//         let offset = 0;
+//         inner.style.transition = '0.5s all';
+//
+//         next.addEventListener('click', () => {
+//             offset = offset + 420;
+//             if (offset > 2520) {
+//                 offset = 0;
+//             }
+//             inner.style.transform = `translateX(-${offset}px`;
+//         });
+//
+//         prev.addEventListener('click', () => {
+//             offset = offset - 420;
+//             if (offset < 0) {
+//                 offset = 2520;
+//             }
+//             inner.style.transform = `translateX(-${offset}px`;
+//         });
+//     } catch (e) {
+//         console.log(e);
+//     }
+// }
 
 export {sliderCards, sliderTestimonials, miniCards, miniGridCards};
